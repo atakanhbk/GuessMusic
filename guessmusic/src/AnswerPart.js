@@ -5,13 +5,11 @@ export default function AnswerPart({ musics }) {
     e.preventDefault();
     const buttonText = e.target.textContent;
     const answerText = musics.correctAnswer;
-  
 
-    if(buttonText === answerText){
-        console.log("Correct Answer !!!");
-    }
-    else{
-        console.log("Wrong Answer");
+    if (buttonText === answerText) {
+      console.log("Correct Answer !!!");
+    } else {
+      console.log("Wrong Answer");
     }
   };
   return (

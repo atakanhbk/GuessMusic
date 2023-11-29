@@ -5,6 +5,7 @@ import AnswerPart from "./AnswerPart";
 function VideoPlayer({ playerIndex, musics }) {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [isRestartButtonVisible, setIsRestartButtonVisible] = useState(false);
+  const [showAnswerPart, setShowAnswerPart] = useState(false);
   const [timeValue, setTimeValue] = useState("0.5");
 
   const playerRef = useRef(null);
@@ -16,6 +17,7 @@ function VideoPlayer({ playerIndex, musics }) {
     }
     setIsButtonVisible(false);
     setIsRestartButtonVisible(false);
+    setShowAnswerPart(false);
 
     setTimeout(() => {
       pauseVideo();
@@ -25,6 +27,7 @@ function VideoPlayer({ playerIndex, musics }) {
   const pauseVideo = () => {
     playerRef.current.getInternalPlayer().pauseVideo();
     setIsRestartButtonVisible(true);
+    setShowAnswerPart(true);
   };
   const getTimeValue = (event) => {
     setTimeValue(event.target.value);
@@ -60,7 +63,7 @@ function VideoPlayer({ playerIndex, musics }) {
         </button>
       )}
 
-      <AnswerPart musics={musics[playerIndex].answerPart} />
+      {showAnswerPart && <AnswerPart musics={musics[playerIndex].answerPart} />}
     </div>
   );
 }
