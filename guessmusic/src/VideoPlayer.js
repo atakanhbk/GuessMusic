@@ -1,30 +1,29 @@
-import React, { useRef } from 'react';
-import ReactPlayer from 'react-player/youtube'; // Import ReactPlayer from your package
+import React, { useRef } from "react";
+import ReactPlayer from "react-player/youtube";
 
-function VideoPlayer() {
+function VideoPlayer({ playerIndex, musics, timeValue }) {
   const playerRef = useRef(null);
-
-  const musicsClass = {
-    music1: {
-        url:"https://www.youtube.com/watch?v=MwpMEbgC7DA",
-    },
-  };
-  
 
   const startVideo = () => {
     if (playerRef && playerRef.current) {
-      playerRef.current.seekTo(0,5); 
+      playerRef.current.seekTo(musics[playerIndex].startSecond);
       playerRef.current.getInternalPlayer().playVideo(); // Plays the video
     }
+
+    setTimeout(() => {
+      pauseVideo();
+    }, Number(timeValue) * 1000);
   };
 
+  const pauseVideo = () => {
+    playerRef.current.getInternalPlayer().pauseVideo();
+  };
   return (
     <div>
       <ReactPlayer
         ref={playerRef}
-        url={musicsClass.music1.url}
+        url={musics[playerIndex].url}
         controls={true}
-       
       />
       <button onClick={startVideo}>Start Video</button>
     </div>
