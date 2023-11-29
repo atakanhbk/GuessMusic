@@ -57,13 +57,13 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
 
   useEffect(() => {
     playJustOnce();
-  }, []);
+  }, [musics[currentMusicIndex].url]);
 
   return (
     <div id="video-player">
       <ReactPlayer
-        width={330}
-        height={330}
+        width={0}
+        height={0}
         ref={playerRef}
         url={musics[currentMusicIndex].url}
         controls={true}
