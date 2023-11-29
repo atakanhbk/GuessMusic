@@ -1,0 +1,26 @@
+.listen-again-button {
+  display: none;
+}
+
+.answer-part {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.answer {
+  margin: 0px 10px;
+  font-size: 200%;
+  border: 1px solid black;
+  width: 20%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}

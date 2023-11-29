@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <form id="input-form">
+      <select class="time-value">
+        <option>0.5</option>
+        <option>1.0</option>
+        <option>1.5</option>
+        <option>2.0</option>
+      </select>
+      <br /><br />
+      <input class="start-music" type="button" value="Start Game" />
+     
+    </form>
+
+    <button class="listen-again-button">Listen Again</button>
+
+    <div class="answer-part">
+      <button class="first answer">A</button>
+      <button class="second answer">A</button>
+      <button class="third answer">A</button>
+     
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
