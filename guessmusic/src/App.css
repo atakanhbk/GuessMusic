@@ -1,0 +1,13 @@
+#answer-part {
+  display: flex;
+  gap: 30px;
+  margin: 30px;
+  height: 30%;
+  width: 60%;
+  position: absolute;
+}
+
+.answer{
+  width: 10%;
+  height: 50%;
+}

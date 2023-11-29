@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import "./App.css";
 import VideoPlayer from "./VideoPlayer";
-import InputPart from "./InputPart";
+
 
 function App() {
-  const [timeValue, setTimeValue] = useState("0.5");
 
   const currentMusicIndex = 0; // Example current music index
   const musicsClass = [
     {
       startSecond: 1,
       url: "https://www.youtube.com/watch?v=MwpMEbgC7DA",
+      answerPart:{
+        firstAnswer: "Another Love",
+        secondAnswer: "Kill This Love",
+        thirdAnswer: "Summarize Life",
+        correctAnswer : "Another Love"
+      }
+    
     },
     {
       startSecond: 5,
@@ -18,18 +24,11 @@ function App() {
     // Add more music objects as needed
   ];
 
-  const showTimeValue = (element) => {
-    setTimeValue(element);
-  };
-
-  useEffect(() => {
-    console.log(timeValue);
-  }, [timeValue]);
-
+  
   return (
     <div>
-      <VideoPlayer playerIndex={currentMusicIndex} musics={musicsClass} timeValue = {timeValue} />
-      <InputPart timeValue={showTimeValue} />
+      <VideoPlayer playerIndex={currentMusicIndex} musics={musicsClass} />
+
     </div>
   );
 }
