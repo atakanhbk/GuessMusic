@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function AnswerPart({ musics }) {
+export default function AnswerPart({ musics, nextLevel }) {
+  const [showNextLevelButton, setShowNextLevelButton] = useState(false);
   const checkAnswer = (e) => {
     e.preventDefault();
     const buttonText = e.target.textContent;
     const answerText = musics.correctAnswer;
 
     if (buttonText === answerText) {
-      console.log("Correct Answer !!!");
+      setShowNextLevelButton(true);
     } else {
       console.log("Wrong Answer");
     }
   };
+
+  const nextLevelFunction = () => {
+    nextLevel();
+  };
+
   return (
     <div>
       <form id="answer-part">
@@ -25,6 +31,12 @@ export default function AnswerPart({ musics }) {
           {musics.thirdAnswer}
         </button>
       </form>
+
+      {showNextLevelButton && (
+        <button className="next-level-button" onClick={nextLevelFunction}>
+          Next Level
+        </button>
+      )}
     </div>
   );
 }

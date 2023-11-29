@@ -2,17 +2,18 @@ import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import AnswerPart from "./AnswerPart";
 
-function VideoPlayer({ playerIndex, musics }) {
+function VideoPlayer({ currentMusicIndex, musics , increaseCurrentMusicIndex }) {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [isRestartButtonVisible, setIsRestartButtonVisible] = useState(false);
   const [showAnswerPart, setShowAnswerPart] = useState(false);
   const [timeValue, setTimeValue] = useState("0.5");
 
   const playerRef = useRef(null);
+  
 
   const startVideo = () => {
     if (playerRef && playerRef.current) {
-      playerRef.current.seekTo(musics[playerIndex].startSecond);
+      playerRef.current.seekTo(musics[currentMusicIndex].startSecond);
       playerRef.current.getInternalPlayer().playVideo(); // Plays the video
     }
     setIsButtonVisible(false);
@@ -33,11 +34,18 @@ function VideoPlayer({ playerIndex, musics }) {
     setTimeValue(event.target.value);
   };
 
+  const nextLevel = () => {
+    increaseCurrentMusicIndex();
+    setIsButtonVisible(true);
+    setIsRestartButtonVisible(false);
+    setShowAnswerPart(false);
+  }
+  
   return (
     <div>
       <ReactPlayer
         ref={playerRef}
-        url={musics[playerIndex].url}
+        url={musics[currentMusicIndex].url}
         controls={true}
       />
       {isButtonVisible && (
@@ -63,7 +71,9 @@ function VideoPlayer({ playerIndex, musics }) {
         </button>
       )}
 
-      {showAnswerPart && <AnswerPart musics={musics[playerIndex].answerPart} />}
+      {showAnswerPart && <AnswerPart musics={musics[currentMusicIndex].answerPart} nextLevel = {nextLevel} />}
+
+    
     </div>
   );
 }
