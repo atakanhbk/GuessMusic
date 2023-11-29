@@ -25,6 +25,17 @@ function App() {
         correctAnswer: "Billie Jean",
       },
     },
+
+    {
+      startSecond: 6,
+      url: "https://www.youtube.com/watch?v=-tJYN-eG1zk&ab_channel=QueenOfficial",
+      answerPart: {
+        firstAnswer: "Eye Of The Tiger",
+        secondAnswer: "Hit the Road Jack",
+        thirdAnswer: "We Will Rock You",
+        correctAnswer: "We Will Rock You",
+      },
+    },
     // Add more music objects as needed
   ];
 
@@ -33,7 +44,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div id="app">
       <VideoPlayer
         currentMusicIndex={currentMusicIndex}
         musics={musicsClass}

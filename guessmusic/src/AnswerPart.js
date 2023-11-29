@@ -2,16 +2,19 @@ import React, { useState } from "react";
 
 export default function AnswerPart({ musics, nextLevel }) {
   const [showNextLevelButton, setShowNextLevelButton] = useState(false);
+
   const checkAnswer = (e) => {
     e.preventDefault();
     const buttonText = e.target.textContent;
     const answerText = musics.correctAnswer;
 
     if (buttonText === answerText) {
-      setShowNextLevelButton(true);
+      e.target.style.backgroundColor = "green";
     } else {
-      console.log("Wrong Answer");
+      e.target.style.backgroundColor = "red";
     }
+
+    setShowNextLevelButton(true);
   };
 
   const nextLevelFunction = () => {
