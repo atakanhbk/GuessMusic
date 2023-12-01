@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./image/logo.png";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Home() {
   return (
@@ -35,12 +36,60 @@ export default function Home() {
       </header>
       <div className="container">
         <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
-        <div className="slider">
-          <ul className="category_card_parent">
-            <li className="category_card"><div>Image</div></li>
-            <li className="category_card"><div>Image</div></li>
-            <li className="category_card"><div>Image</div></li>
+        <div className="wrapper">
+          <i className="fa-solid fa-angle-left"></i>
+          <ul className="carousel">
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
+            <li className="test_card">
+              <div className="img">
+                <img src={Logo} />
+                <h2>Blanche Person</h2>
+                <span>Sales Manager</span>
+              </div>
+            </li>
           </ul>
+          <i className="fa-solid fa-angle-right"></i>
         </div>
       </div>
     </div>
