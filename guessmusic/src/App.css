@@ -142,7 +142,7 @@ li {
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
   gap: 16px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .carousel :where(.test_card) {
