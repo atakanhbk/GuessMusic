@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
 
 export default function Home() {
   const carouselRef = useRef(null);
+  const arrowBtnLeftRef = useRef(null);
+  const arrowBtnRightRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+
+  const [firstCardWidth, setFirstCardWidth] = useState(0);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      const cardWidth =
+        carouselRef.current.querySelector(".test_card").offsetWidth;
+      setFirstCardWidth(cardWidth);
+    }
+  }, []);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -26,6 +38,10 @@ export default function Home() {
   const handleMouseUp = () => {
     setIsDragging(false);
     carouselRef.current.classList.remove("dragging");
+  };
+
+  const clickedArrowButton = (e) => {
+    carouselRef.current.scrollLeft += e.target.id === "left" ? -firstCardWidth : firstCardWidth
   };
 
   return (
@@ -62,7 +78,12 @@ export default function Home() {
       <div className="container">
         <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
         <div className="wrapper">
-          <i className="fa-solid fa-angle-left"></i>
+          <i
+            id="left"
+            className="fa-solid fa-angle-left"
+            ref={arrowBtnLeftRef}
+            onClick={clickedArrowButton}
+          ></i>
           <ul
             className="carousel"
             onMouseDown={handleMouseDown}
@@ -121,7 +142,12 @@ export default function Home() {
               </div>
             </li>
           </ul>
-          <i className="fa-solid fa-angle-right"></i>
+          <i
+            id="right"
+            className="fa-solid fa-angle-right"
+            ref={arrowBtnRightRef}
+            onClick={clickedArrowButton}
+          ></i>
         </div>
       </div>
     </div>

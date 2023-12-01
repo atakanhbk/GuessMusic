@@ -130,11 +130,11 @@ li {
 }
 
 .wrapper i:first-child {
-  left: -22px;
+  left: -72px;
 }
 
 .wrapper i:last-child {
-  right: -22px;
+  right: -72px;
 }
 
 .wrapper .carousel {
@@ -142,7 +142,15 @@ li {
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
   gap: 16px;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel :where(.test_card) {
@@ -152,7 +160,11 @@ li {
   flex-direction: column;
 }
 
-.carousel.dragging .test_card{
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .test_card {
   cursor: grab;
   user-select: none;
 }
