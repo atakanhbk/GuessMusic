@@ -73,6 +73,7 @@ li {
   width: 100%;
   padding: 0 100px;
   margin: 50px auto;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -82,6 +83,7 @@ li {
   text-transform: uppercase;
   text-shadow: 2px 4px 4px #cc00ff;
   color: white;
+  margin-bottom: 20px;
 }
 
 .slider {
