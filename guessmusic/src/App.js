@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import VideoPlayer from "./VideoPlayer";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './Home';
 
 
 function App() {
@@ -47,12 +48,12 @@ function App() {
 
   return (
     <div id="app">
-    
-      <VideoPlayer
+    <Home/>
+      {/* <VideoPlayer
         currentMusicIndex={currentMusicIndex}
         musics={musicsClass}
         increaseCurrentMusicIndex={increaseCurrentMusicIndex}
-      />
+      /> */}
     </div>
   );
 }

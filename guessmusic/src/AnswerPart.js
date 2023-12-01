@@ -34,6 +34,9 @@ export default function AnswerPart({ musics, nextLevel, levelOver }) {
 
   return (
     <div>
+
+      
+      
       {showNextLevelButton && (
         <button className="btn btn-success" onClick={nextLevelFunction}>
           Next Level
