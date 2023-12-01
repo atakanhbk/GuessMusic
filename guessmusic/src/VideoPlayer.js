@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import AnswerPart from "./AnswerPart";
 
-function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
+
+
+export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const [isRestartButtonVisible, setIsRestartButtonVisible] = useState(false);
   const [showAnswerPart, setShowAnswerPart] = useState(false);
@@ -67,7 +69,7 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
 
   return (
     <div id="video-player">
-      
+  
       <ReactPlayer
         width={0}
         height={0}
@@ -111,4 +113,3 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
   );
 }
 
-export default VideoPlayer;

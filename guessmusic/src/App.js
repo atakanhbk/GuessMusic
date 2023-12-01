@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./Home";
 import VideoPlayer from "./VideoPlayer";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Home';
-
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
@@ -48,12 +48,22 @@ function App() {
 
   return (
     <div id="app">
-    <Home/>
-      {/* <VideoPlayer
-        currentMusicIndex={currentMusicIndex}
-        musics={musicsClass}
-        increaseCurrentMusicIndex={increaseCurrentMusicIndex}
-      /> */}
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/game"
+            element={
+              <VideoPlayer
+                currentMusicIndex={currentMusicIndex}
+                musics={musicsClass}
+                increaseCurrentMusicIndex={increaseCurrentMusicIndex}
+              />
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

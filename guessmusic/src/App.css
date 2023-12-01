@@ -24,9 +24,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 35px;
-  height: 10%;
-  background-color: black;
-  color: wheat;
+  height: 100px;
+  background-color: #151027;
+  color: #cc00ff;
+  font-weight: bold;
 }
 
 .nav-ul {
@@ -36,12 +37,12 @@ header {
   padding: 0px;
   margin: 0px;
   font-size: 20px;
-  font-weight: bold;
 }
 
 .creative_link {
   text-decoration: none;
   list-style-type: none;
+  color: #cc00ff;
 }
 
 #video-player {
