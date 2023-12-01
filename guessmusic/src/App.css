@@ -11,6 +11,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  background: linear-gradient(to right, #cc00ff, #7000ff);
 }
 
 #home {
@@ -25,7 +26,6 @@ header {
   align-items: center;
   padding: 0px 35px;
   height: 100px;
-  background-color: #151027;
   color: #cc00ff;
   font-weight: bold;
 }
@@ -33,15 +33,16 @@ header {
 .nav-ul {
   display: flex;
   gap: 50px;
-  list-style-type: none;
   padding: 0px;
   margin: 0px;
   font-size: 20px;
 }
 
+li{
+  list-style-type: none;
+}
 .creative_link {
   text-decoration: none;
-  list-style-type: none;
   color: #cc00ff;
 }
 
@@ -50,6 +51,7 @@ header {
   height: 100%;
   text-align: center;
 }
+
 
 #answer-part {
   display: flex;
@@ -66,3 +68,46 @@ header {
   width: 10%;
   height: 50%;
 }
+
+.container {
+  height: 80%;
+  width: 100%;
+  padding: 0 100px;
+  margin: 50px auto;
+}
+
+.main_title {
+  text-transform: uppercase;
+  text-shadow: 2px 4px 4px #cc00ff;
+  color: white;
+}
+
+.slider {
+  width: 100%;
+  background: red;
+  height: 500px;
+  margin: 25px 0px;
+
+}
+
+.category_card_parent{
+  width: auto;
+  height: 100%;
+  display: flex;
+  padding: 25px;
+  gap: 155px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.category_card{
+  width: 25%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
