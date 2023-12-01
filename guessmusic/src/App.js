@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import VideoPlayer from "./VideoPlayer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
@@ -45,6 +47,7 @@ function App() {
 
   return (
     <div id="app">
+    
       <VideoPlayer
         currentMusicIndex={currentMusicIndex}
         musics={musicsClass}

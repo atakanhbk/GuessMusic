@@ -61,6 +61,7 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
 
   return (
     <div id="video-player">
+      
       <ReactPlayer
         width={0}
         height={0}
@@ -80,14 +81,14 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
             <br />
             <br />
 
-            <button className="start-button" onClick={startVideo}>
+            <button className="btn btn-info" onClick={startVideo}>
               Start Video
             </button>
           </form>
         )}
 
         {isRestartButtonVisible && (
-          <button className="restart-button" onClick={startVideo}>
+          <button className="btn btn-warning" onClick={startVideo}>
             Restart Button
           </button>
         )}

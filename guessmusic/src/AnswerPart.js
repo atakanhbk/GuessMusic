@@ -2,19 +2,29 @@ import React, { useState } from "react";
 
 export default function AnswerPart({ musics, nextLevel }) {
   const [showNextLevelButton, setShowNextLevelButton] = useState(false);
+  const [closeButton, setCloseButton] = useState(false);
 
   const checkAnswer = (e) => {
+    const answerButtons = document.getElementsByClassName("answer");
+
     e.preventDefault();
-    const buttonText = e.target.textContent;
+
     const answerText = musics.correctAnswer;
 
-    if (buttonText === answerText) {
-      e.target.style.backgroundColor = "green";
-    } else {
-      e.target.style.backgroundColor = "red";
+    for (let button of answerButtons) {
+      if (button.textContent === answerText) {
+        button.style.backgroundColor = "green";
+        button.style.color = "white";
+      } else {
+        button.style.backgroundColor = "red";
+        button.style.color = "white";
+      }
+      button.disabled = true; // Disabling all buttons after an answer is selected
     }
-
+    e.target.style.color = "white";
+    console.log(e);
     setShowNextLevelButton(true);
+    setCloseButton(true);
   };
 
   const nextLevelFunction = () => {
@@ -24,19 +34,31 @@ export default function AnswerPart({ musics, nextLevel }) {
   return (
     <div>
       <form id="answer-part">
-        <button className="first answer btn" onClick={checkAnswer}>
+        <button
+          className="answer btn btn-outline-primary"
+          onClick={checkAnswer}
+          disabled={closeButton}
+        >
           {musics.firstAnswer}
         </button>
-        <button className="second answer btn" onClick={checkAnswer}>
+        <button
+          className="answer btn btn-outline-primary"
+          onClick={checkAnswer}
+          disabled={closeButton}
+        >
           {musics.secondAnswer}
         </button>
-        <button className="third answer btn" onClick={checkAnswer}>
+        <button
+          className="answer btn btn-outline-primary"
+          onClick={checkAnswer}
+          disabled={closeButton}
+        >
           {musics.thirdAnswer}
         </button>
       </form>
 
       {showNextLevelButton && (
-        <button className="next-level-button" onClick={nextLevelFunction}>
+        <button className="btn btn-success" onClick={nextLevelFunction}>
           Next Level
         </button>
       )}
