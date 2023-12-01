@@ -69,10 +69,13 @@ li {
 }
 
 .container {
-  height: 80%;
+  height: 400px;
   width: 100%;
   padding: 0 100px;
   margin: 50px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main_title {
