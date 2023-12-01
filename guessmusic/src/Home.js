@@ -13,6 +13,7 @@ export default function Home() {
     setIsDragging(true);
     setStartX(e.pageX - carouselRef.current.offsetLeft);
     setScrollLeft(carouselRef.current.scrollLeft);
+    carouselRef.current.classList.add("dragging");
   };
 
   const handleMouseMove = (e) => {
@@ -24,6 +25,7 @@ export default function Home() {
 
   const handleMouseUp = () => {
     setIsDragging(false);
+    carouselRef.current.classList.remove("dragging");
   };
 
   return (
@@ -71,49 +73,49 @@ export default function Home() {
           >
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
             <li className="test_card">
               <div className="img">
-                <img src={Logo} />
+                <img src={Logo} draggable="false" />
                 <h2>Blanche Person</h2>
                 <span>Sales Manager</span>
               </div>

@@ -152,6 +152,11 @@ li {
   flex-direction: column;
 }
 
+.carousel.dragging .test_card{
+  cursor: grab;
+  user-select: none;
+}
+
 .carousel .test_card {
   height: 342px;
   list-style: none;
