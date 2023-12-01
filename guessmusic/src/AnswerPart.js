@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AnswerPart({ musics, nextLevel }) {
+export default function AnswerPart({ musics, nextLevel, levelOver }) {
   const [showNextLevelButton, setShowNextLevelButton] = useState(false);
   const [closeButton, setCloseButton] = useState(false);
 
@@ -25,6 +25,7 @@ export default function AnswerPart({ musics, nextLevel }) {
     console.log(e);
     setShowNextLevelButton(true);
     setCloseButton(true);
+    levelOver();
   };
 
   const nextLevelFunction = () => {
@@ -33,6 +34,11 @@ export default function AnswerPart({ musics, nextLevel }) {
 
   return (
     <div>
+      {showNextLevelButton && (
+        <button className="btn btn-success" onClick={nextLevelFunction}>
+          Next Level
+        </button>
+      )}
       <form id="answer-part">
         <button
           className="answer btn btn-outline-primary"
@@ -56,12 +62,6 @@ export default function AnswerPart({ musics, nextLevel }) {
           {musics.thirdAnswer}
         </button>
       </form>
-
-      {showNextLevelButton && (
-        <button className="btn btn-success" onClick={nextLevelFunction}>
-          Next Level
-        </button>
-      )}
     </div>
   );
 }

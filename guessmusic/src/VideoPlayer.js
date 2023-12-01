@@ -42,6 +42,7 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
     setShowAnswerPart(false);
   };
 
+  
   const playJustOnce = () => {
     const reachPlayerRef = setInterval(() => {
 
@@ -54,6 +55,11 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
       }
     }, 200);
   };
+  
+
+  const levelOver = () => {
+    setIsRestartButtonVisible(false);
+  }
 
   useEffect(() => {
     playJustOnce();
@@ -69,7 +75,7 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
         url={musics[currentMusicIndex].url}
         controls={true}
       />
-      <div className="all-input-part">
+      <div className="all-input-part ">
         {isButtonVisible && (
           <form id="input-form">
             <select className="time-value" onChange={getTimeValue}>
@@ -97,6 +103,7 @@ function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
           <AnswerPart
             musics={musics[currentMusicIndex].answerPart}
             nextLevel={nextLevel}
+            levelOver = {levelOver}
           />
         )}
       </div>
