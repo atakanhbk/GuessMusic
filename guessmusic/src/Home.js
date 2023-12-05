@@ -46,7 +46,8 @@ export default function Home() {
   };
 
   const clickedArrowButton = (e) => {
-    carouselRef.current.scrollLeft += e.target.id === "left" ? -firstCardWidth : firstCardWidth
+    carouselRef.current.scrollLeft +=
+      e.target.id === "left" ? -firstCardWidth : firstCardWidth;
   };
 
   return (
@@ -76,9 +77,23 @@ export default function Home() {
                 Play
               </a>
             </li>
+            <li>
+              <a className="creative_link" href="/game">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a className="creative_link" href="/game">
+                About
+              </a>
+            </li>
           </ul>
         </div>
-        <div className="account">Log in / Sign in</div>
+        <div className="account">
+          <a href="#">
+            <div className="account-button">Log in / Log out</div>
+          </a>
+        </div>
       </header>
       <div className="container">
         <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
@@ -132,7 +147,6 @@ export default function Home() {
                 <span>Sales Manager</span>
               </div>
             </li>
-      
           </ul>
           <i
             id="right"

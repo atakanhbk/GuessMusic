@@ -43,7 +43,27 @@ li {
 }
 .creative_link {
   text-decoration: none;
-  color: #cc00ff;
+  color: white;
+}
+
+.account {
+  padding: 4px;
+  border-radius: 12px;
+  background-color: #cc00ff;
+  color: white;
+  box-sizing: border-box;
+}
+
+.account a{
+  text-decoration: none;
+  color: white;
+}
+
+.account-button {
+ background-color: rgb(114, 16, 239);
+ border-radius: 10px;
+ padding: 8px;
+ box-sizing: border-box;
 }
 
 #video-player {
@@ -169,7 +189,6 @@ li {
   height: 148px;
   border-radius: 50%;
 }
-
 
 .category_card .img img {
   width: 140px;
