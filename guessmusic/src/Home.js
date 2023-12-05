@@ -3,6 +3,7 @@ import ClassicalMusicIcon from "./image/icons/classical-music-icon.png";
 import PopMusicIcon from "./image/icons/pop-music-icon.png";
 import RapMusicIcon from "./image/icons/rap-music-icon.png";
 import AnimeMusicIcon from "./image/icons/anime-music-icon.png";
+import TrendMusicIcon from "./image/icons/trend-music-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
@@ -98,7 +99,7 @@ export default function Home() {
           >
             <li className="category_card">
               <div className="img">
-                <img src={ClassicalMusicIcon} draggable="false" />
+                <img src={TrendMusicIcon} draggable="false" />
                 <h2>Trend</h2>
                 <span>Sales Manager</span>
               </div>
