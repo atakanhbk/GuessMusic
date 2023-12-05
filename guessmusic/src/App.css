@@ -93,28 +93,8 @@ li {
   margin: 25px 0px;
 }
 
-.category_card_parent {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 25px;
-  gap: 155px;
-}
-
-.category_card {
-  width: 25%;
-  height: 100%;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0px 35px;
-}
-
 .wrapper {
-  max-width: 1100px;
+  max-width: 1500px;
   width: 100%;
   position: relative;
 }
@@ -158,7 +138,7 @@ li {
   display: none;
 }
 
-.carousel :where(.test_card) {
+.carousel :where(.category_card) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,12 +149,12 @@ li {
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
-.carousel.dragging .test_card {
+.carousel.dragging .category_card {
   cursor: grab;
   user-select: none;
 }
 
-.carousel .test_card {
+.carousel .category_card {
   height: 342px;
   list-style: none;
   background-color: #fff;
@@ -183,28 +163,33 @@ li {
   padding-bottom: 105px;
 }
 
-.test_card .img {
+.category_card .img {
   background-color: #7000ff;
   width: 148px;
   height: 148px;
   border-radius: 50%;
 }
 
-.test_card .img img {
+
+.category_card .img img {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #fff;
+  padding: 10px;
 }
 
-.test_card h2 {
+.category_card h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
-  font-size: 1.56rem;
+  font-size: 2.3rem;
   margin: 30px 0 5px;
 }
 
-.test_card span {
+.category_card span {
   color: #6a6d78;
   font-size: 1.31rem;
 }

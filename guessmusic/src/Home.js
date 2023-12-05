@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+import ClassicalMusicIcon from "./image/icons/classical-music-icon.png";
+import PopMusicIcon from "./image/icons/pop-music-icon.png";
+import RapMusicIcon from "./image/icons/rap-music-icon.png";
+import AnimeMusicIcon from "./image/icons/anime-music-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
@@ -16,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     if (carouselRef.current) {
       const cardWidth =
-        carouselRef.current.querySelector(".test_card").offsetWidth;
+        carouselRef.current.querySelector(".category_card").offsetWidth;
       setFirstCardWidth(cardWidth);
     }
   }, []);
@@ -92,55 +96,42 @@ export default function Home() {
             onMouseLeave={handleMouseUp}
             ref={carouselRef}
           >
-            <li className="test_card">
+            <li className="category_card">
               <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
+                <img src={ClassicalMusicIcon} draggable="false" />
+                <h2>Trend</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
-            <li className="test_card">
+            <li className="category_card">
               <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
+                <img src={RapMusicIcon} draggable="false" />
+                <h2>Rap/Hiphop</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
-            <li className="test_card">
+            <li className="category_card">
               <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
+                <img src={ClassicalMusicIcon} draggable="false" />
+                <h2>Classics</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
-            <li className="test_card">
+            <li className="category_card">
               <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
+                <img src={PopMusicIcon} draggable="false" />
+                <h2>Pop</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
-            <li className="test_card">
+            <li className="category_card">
               <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
+                <img src={AnimeMusicIcon} draggable="false" />
+                <h2>Anime</h2>
                 <span>Sales Manager</span>
               </div>
             </li>
-            <li className="test_card">
-              <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
-                <span>Sales Manager</span>
-              </div>
-            </li>
-            <li className="test_card">
-              <div className="img">
-                <img src={Logo} draggable="false" />
-                <h2>Blanche Person</h2>
-                <span>Sales Manager</span>
-              </div>
-            </li>
+      
           </ul>
           <i
             id="right"
