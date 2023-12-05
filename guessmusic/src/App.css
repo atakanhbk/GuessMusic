@@ -11,7 +11,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #cc00ff, #7000ff);
+  /* background: linear-gradient(to right, #cc00ff, #7000ff); */
+  background: linear-gradient(to bottom, #161a1a 0%, rgba(38,41,41,0.99) 100%);
 }
 
 #home {
@@ -60,7 +61,7 @@ li {
 }
 
 .account-button {
- background-color: rgb(114, 16, 239);
+  background: linear-gradient(to bottom, #161a1a 0%, rgba(38,41,41,0.99) 100%);
  border-radius: 10px;
  padding: 8px;
  box-sizing: border-box;
