@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import ClassicalMusicIcon from "./image/icons/classical-music-icon.png";
-import PopMusicIcon from "./image/icons/pop-music-icon.png";
-import RapMusicIcon from "./image/icons/rap-music-icon.png";
 import AnimeMusicIcon from "./image/icons/anime-music-icon.png";
-import TrendMusicIcon from "./image/icons/trend-music-icon.png";
+import CupIcon from "./image/icons/cup-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
@@ -117,156 +114,21 @@ export default function Home() {
                 <div class="main">
                   <img
                     class="tokenImage"
-                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    src="https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
                     alt="NFT"
                   />
-                  <h2>Kibertopiks #4269</h2>
-                  <p class="description">
-                    Our Kibertopiks will give you nothing, waste your money on
-                    us.
-                  </p>
-                  <div class="tokenInfo">
-                    <div class="price">
-                      <ins>◘</ins>
-                      <p>0.031 ETH</p>
-                    </div>
-                    <div class="duration">
-                      <ins>◷</ins>
-                      <p>11 days left</p>
-                    </div>
-                  </div>
+                  <h2>Rap / Hiphop</h2>
+
                   <hr />
                   <div class="creator">
-                    <div class="wrapper">
-                      <img
-                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
-                        alt="Creator"
-                      />
-                    </div>
                     <p>
-                      <ins>Creation of</ins> Kiberbash
+                      <img src={CupIcon} /> <ins>Probest</ins>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <div class="nft">
-                <div class="main">
-                  <img
-                    class="tokenImage"
-                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                    alt="NFT"
-                  />
-                  <h2>Kibertopiks #4269</h2>
-                  <p class="description">
-                    Our Kibertopiks will give you nothing, waste your money on
-                    us.
-                  </p>
-                  <div class="tokenInfo">
-                    <div class="price">
-                      <ins>◘</ins>
-                      <p>0.031 ETH</p>
-                    </div>
-                    <div class="duration">
-                      <ins>◷</ins>
-                      <p>11 days left</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="creator">
-                    <div class="wrapper">
-                      <img
-                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
-                        alt="Creator"
-                      />
-                    </div>
-                    <p>
-                      <ins>Creation of</ins> Kiberbash
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="nft">
-                <div class="main">
-                  <img
-                    class="tokenImage"
-                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                    alt="NFT"
-                  />
-                  <h2>Kibertopiks #4269</h2>
-                  <p class="description">
-                    Our Kibertopiks will give you nothing, waste your money on
-                    us.
-                  </p>
-                  <div class="tokenInfo">
-                    <div class="price">
-                      <ins>◘</ins>
-                      <p>0.031 ETH</p>
-                    </div>
-                    <div class="duration">
-                      <ins>◷</ins>
-                      <p>11 days left</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="creator">
-                    <div class="wrapper">
-                      <img
-                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
-                        alt="Creator"
-                      />
-                    </div>
-                    <p>
-                      <ins>Creation of</ins> Kiberbash
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="nft">
-                <div class="main">
-                  <img
-                    class="tokenImage"
-                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                    alt="NFT"
-                  />
-                  <h2>Kibertopiks #4269</h2>
-                  <p class="description">
-                    Our Kibertopiks will give you nothing, waste your money on
-                    us.
-                  </p>
-                  <div class="tokenInfo">
-                    <div class="price">
-                      <ins>◘</ins>
-                      <p>0.031 ETH</p>
-                    </div>
-                    <div class="duration">
-                      <ins>◷</ins>
-                      <p>11 days left</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="creator">
-                    <div class="wrapper">
-                      <img
-                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
-                        alt="Creator"
-                      />
-                    </div>
-                    <p>
-                      <ins>Creation of</ins> Kiberbash
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             <li className="category_card">
               <div className="img">
                 <img src={AnimeMusicIcon} draggable="false" />
