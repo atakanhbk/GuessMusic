@@ -96,8 +96,9 @@ export default function Home() {
         </div>
       </header>
       <div className="container">
-        <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
+      
         <div className="wrapper">
+        <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
           <i
             id="left"
             className="fa-solid fa-angle-left"
@@ -112,34 +113,161 @@ export default function Home() {
             onMouseLeave={handleMouseUp}
             ref={carouselRef}
           >
-            <li className="category_card">
-              <div className="img">
-                <img src={TrendMusicIcon} draggable="false" />
-                <h2>Trend</h2>
-                <span>Sales Manager</span>
+            <div>
+              <div class="nft">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="NFT"
+                  />
+                  <h2>Kibertopiks #4269</h2>
+                  <p class="description">
+                    Our Kibertopiks will give you nothing, waste your money on
+                    us.
+                  </p>
+                  <div class="tokenInfo">
+                    <div class="price">
+                      <ins>◘</ins>
+                      <p>0.031 ETH</p>
+                    </div>
+                    <div class="duration">
+                      <ins>◷</ins>
+                      <p>11 days left</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="creator">
+                    <div class="wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                        alt="Creator"
+                      />
+                    </div>
+                    <p>
+                      <ins>Creation of</ins> Kiberbash
+                    </p>
+                  </div>
+                </div>
               </div>
-            </li>
-            <li className="category_card">
-              <div className="img">
-                <img src={RapMusicIcon} draggable="false" />
-                <h2>Rap/Hiphop</h2>
-                <span>Sales Manager</span>
+            </div>
+
+            <div>
+              <div class="nft">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="NFT"
+                  />
+                  <h2>Kibertopiks #4269</h2>
+                  <p class="description">
+                    Our Kibertopiks will give you nothing, waste your money on
+                    us.
+                  </p>
+                  <div class="tokenInfo">
+                    <div class="price">
+                      <ins>◘</ins>
+                      <p>0.031 ETH</p>
+                    </div>
+                    <div class="duration">
+                      <ins>◷</ins>
+                      <p>11 days left</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="creator">
+                    <div class="wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                        alt="Creator"
+                      />
+                    </div>
+                    <p>
+                      <ins>Creation of</ins> Kiberbash
+                    </p>
+                  </div>
+                </div>
               </div>
-            </li>
-            <li className="category_card">
-              <div className="img">
-                <img src={ClassicalMusicIcon} draggable="false" />
-                <h2>Classics</h2>
-                <span>Sales Manager</span>
+            </div>
+
+            <div>
+              <div class="nft">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="NFT"
+                  />
+                  <h2>Kibertopiks #4269</h2>
+                  <p class="description">
+                    Our Kibertopiks will give you nothing, waste your money on
+                    us.
+                  </p>
+                  <div class="tokenInfo">
+                    <div class="price">
+                      <ins>◘</ins>
+                      <p>0.031 ETH</p>
+                    </div>
+                    <div class="duration">
+                      <ins>◷</ins>
+                      <p>11 days left</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="creator">
+                    <div class="wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                        alt="Creator"
+                      />
+                    </div>
+                    <p>
+                      <ins>Creation of</ins> Kiberbash
+                    </p>
+                  </div>
+                </div>
               </div>
-            </li>
-            <li className="category_card">
-              <div className="img">
-                <img src={PopMusicIcon} draggable="false" />
-                <h2>Pop</h2>
-                <span>Sales Manager</span>
+            </div>
+
+            <div>
+              <div class="nft">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="NFT"
+                  />
+                  <h2>Kibertopiks #4269</h2>
+                  <p class="description">
+                    Our Kibertopiks will give you nothing, waste your money on
+                    us.
+                  </p>
+                  <div class="tokenInfo">
+                    <div class="price">
+                      <ins>◘</ins>
+                      <p>0.031 ETH</p>
+                    </div>
+                    <div class="duration">
+                      <ins>◷</ins>
+                      <p>11 days left</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="creator">
+                    <div class="wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+                        alt="Creator"
+                      />
+                    </div>
+                    <p>
+                      <ins>Creation of</ins> Kiberbash
+                    </p>
+                  </div>
+                </div>
               </div>
-            </li>
+            </div>
             <li className="category_card">
               <div className="img">
                 <img src={AnimeMusicIcon} draggable="false" />
