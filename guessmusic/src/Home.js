@@ -96,9 +96,8 @@ export default function Home() {
         </div>
       </header>
       <div className="container">
-      
-        <div className="wrapper">
         <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
+        <div className="wrapper">
           <i
             id="left"
             className="fa-solid fa-angle-left"
