@@ -93,7 +93,6 @@ export default function Home() {
         </div>
       </header>
       <div className="container">
-        <h3 className="main_title fs-1 fw-bold">Choose A Category</h3>
         <div className="wrapper">
           <i
             id="left"
@@ -109,31 +108,75 @@ export default function Home() {
             onMouseLeave={handleMouseUp}
             ref={carouselRef}
           >
-            <div>
-              <div class="nft">
+            <li>
+              <div class="category_card">
                 <div class="main">
                   <img
                     class="tokenImage"
                     src="https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
-                    alt="NFT"
                   />
                   <h2>Rap / Hiphop</h2>
-
                   <hr />
-                  <div class="creator">
+                  <div class="prize">
                     <p>
                       <img src={CupIcon} /> <ins>Probest</ins>
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
+            </li>
 
-            <li className="category_card">
-              <div className="img">
-                <img src={AnimeMusicIcon} draggable="false" />
-                <h2>Anime</h2>
-                <span>Sales Manager</span>
+            <li>
+              <div class="category_card">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src="https://vistapointe.net/images/jazz-1.jpg"
+                  />
+                  <h2>Jazz</h2>
+                  <hr />
+                  <div class="prize">
+                    <p>
+                      <img src={CupIcon} /> <ins>JustForMySelf</ins>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="category_card">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src=" https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
+                  />
+                  <h2>Pop</h2>
+                  <hr />
+                  <div class="prize">
+                    <p>
+                      <img src={CupIcon} /> <ins>BilliE261</ins>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="category_card">
+                <div class="main">
+                  <img
+                    class="tokenImage"
+                    src="https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
+                  />
+                  <h2>Rock</h2>
+                  <hr />
+                  <div class="prize">
+                    <p>
+                      <img src={CupIcon} /> <ins>RockRuckPuck</ins>
+                    </p>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
