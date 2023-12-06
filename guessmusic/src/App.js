@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Home";
 import VideoPlayer from "./VideoPlayer";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import Video from "./videos/travis_scott.mp4";
 
 function App() {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
@@ -48,6 +49,28 @@ function App() {
 
   return (
     <div id="app">
+      <video
+        width="100%"
+        height="100%"
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls={false}
+        style={{
+          outline: "none",
+          border: "none",
+          position: "absolute",
+          left: "0",
+          top: "0",
+          objectFit: 'cover',
+          opacity: 0.5, // Saydamlık seviyesi (0 ile 1 arasında)
+        }}
+      >
+        <source src={Video} type="video/mp4" />
+        {/* You can add multiple source elements for different formats */}
+        Your browser does not support the video tag.
+      </video>
 
       <Router>
         <Routes>

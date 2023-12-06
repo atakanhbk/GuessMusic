@@ -26,11 +26,20 @@ export default function Home() {
     completeSentence(chooseCategoryTitle);
   }, []);
 
+  const changeBackground = () => {
+    const home = document.getElementById("home");
+    console.log(home);
+    home.style.backgroundImage = `url(https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg)`;
+    home.style.objectFit = "cover"; 
+   console.log("Worked");
+  }
+
+  
+
   const completeSentence = (title) => {
     let titleArray = title.current.textContent.split("");
     let currentArray = [];
     let alphabetLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let wordLength = titleArray.length;
     let currentAlphabetIndex = 0;
     let currentIndex = 0;
 
@@ -162,7 +171,7 @@ export default function Home() {
             ref={carouselRef}
           >
             <li>
-              <div className="category_card">
+              <div className="category_card" onClick={changeBackground}>
                 <div className="main">
                   <img
                     className="tokenImage"
@@ -180,7 +189,7 @@ export default function Home() {
             </li>
 
             <li>
-              <div className="category_card">
+              <div className="category_card" onClick={changeBackground}>
                 <div className="main">
                   <img
                     className="tokenImage"
@@ -198,7 +207,7 @@ export default function Home() {
             </li>
 
             <li>
-              <div className="category_card">
+              <div className="category_card" onClick={changeBackground}>
                 <div className="main">
                   <img
                     className="tokenImage"
@@ -216,7 +225,7 @@ export default function Home() {
             </li>
 
             <li>
-              <div className="category_card">
+              <div className="category_card" onClick={changeBackground}>
                 <div className="main">
                   <img
                     className="tokenImage"
