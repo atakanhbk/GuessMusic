@@ -69,9 +69,6 @@ export default function Home() {
         currentArray.pop();
       }
       title.current.textContent = currentArray.join("");
-
-      console.log(currentArray);
-      console.log(titleArray);
     }, 20);
   };
 
