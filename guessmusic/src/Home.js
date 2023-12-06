@@ -14,6 +14,7 @@ export default function Home() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [timer, setTimer] = useState(null);
 
   const [firstCardWidth, setFirstCardWidth] = useState(0);
 
@@ -32,7 +33,6 @@ export default function Home() {
     console.log(home);
     home.style.backgroundImage = `url(https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg)`;
     home.style.objectFit = "cover";
-    console.log("Worked");
   };
 
   const completeSentence = (title) => {
@@ -108,20 +108,24 @@ export default function Home() {
 
   const playVideo = () => {
     if (videoRef.current) {
-      videoRef.current.style.display = "block";
-      videoRef.current.play();
-      videoRef.current.currentTime = 30;
+      const delay = 1000;
+      const currentTimer = setTimeout(() => {
+        videoRef.current.style.display = "block";
+        videoRef.current.play();
+        videoRef.current.currentTime = 30;
+      }, delay);
+      setTimer(currentTimer);
     }
   };
   const stopVideo = () => {
     if (videoRef.current) {
-      videoRef.current.style.display = "none";
-      videoRef.current.currentTime = 0;
-   setTimeout(() => {
-      
-       videoRef.current.pause();
-   }, 200);
-   
+      if (timer) {
+        videoRef.current.style.display = "none";
+        videoRef.current.currentTime = 0;
+        videoRef.current.pause();
+        clearTimeout(timer);
+        setTimer(null);
+      }
     }
   };
 
@@ -146,7 +150,6 @@ export default function Home() {
             opacity: 0.5,
             display: "none",
           }}
-          startTime={30}
         >
           <source src={Video} type="video/mp4" />
           {/* You can add multiple source elements for different formats */}
@@ -220,7 +223,7 @@ export default function Home() {
               <div
                 className="category_card"
                 onClick={changeBackground}
-                onMouseOver={playVideo}
+                onMouseEnter={playVideo}
                 onMouseLeave={stopVideo}
               >
                 <div className="main">
