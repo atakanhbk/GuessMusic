@@ -9,6 +9,7 @@ export default function Home() {
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
   const arrowBtnRightRef = useRef(null);
+  const chooseCategoryTitle = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -21,7 +22,26 @@ export default function Home() {
         carouselRef.current.querySelector(".category_card").offsetWidth;
       setFirstCardWidth(cardWidth);
     }
+
+    completeSentence(chooseCategoryTitle);
   }, []);
+
+  const completeSentence = (title) => {
+    let titleArray = title.current.textContent.split("");
+    let wordLength = titleArray.length;
+    let currentIndex = 0;
+
+    const writeLetters = setInterval(() => {
+      title.current.textContent += "" + titleArray[currentIndex];
+      currentIndex++;
+
+      if (wordLength == currentIndex) {
+        clearInterval(writeLetters);
+      }
+    }, 200);
+
+    title.current.textContent = "";
+  };
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -46,10 +66,6 @@ export default function Home() {
     carouselRef.current.scrollLeft +=
       e.target.id === "left" ? -firstCardWidth : firstCardWidth;
   };
-
-  const completeSentence = () => {
-    console.log("Test");
-  }
 
   return (
     <div id="home">
@@ -98,9 +114,10 @@ export default function Home() {
       </header>
 
       <div className="container">
-  
         <div className="wrapper">
-        <h1 onClick={completeSentence}>Choose A Category</h1>
+          <h1 onLoad={completeSentence} ref={chooseCategoryTitle}>
+            Choose A Category
+          </h1>
           <i
             id="left"
             className="fa-solid fa-angle-left"
