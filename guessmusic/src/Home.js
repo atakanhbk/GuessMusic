@@ -28,19 +28,52 @@ export default function Home() {
 
   const completeSentence = (title) => {
     let titleArray = title.current.textContent.split("");
+    let currentArray = [];
+    let alphabetLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let wordLength = titleArray.length;
+    let currentAlphabetIndex = 0;
     let currentIndex = 0;
 
     const writeLetters = setInterval(() => {
-      title.current.textContent += "" + titleArray[currentIndex];
-      currentIndex++;
+      if (currentArray.length === 0) {
+        currentArray.push(alphabetLetters[currentAlphabetIndex]);
+      } else {
+        if (titleArray[currentIndex] === " ") {
+          currentArray[currentIndex] = " ";
 
-      if (wordLength === currentIndex) {
-        clearInterval(writeLetters);
+          currentArray.push(" ");
+          currentIndex++;
+          currentAlphabetIndex = 0;
+        } else {
+          if (
+            titleArray[currentIndex].toUpperCase() ===
+            alphabetLetters[currentAlphabetIndex]
+          ) {
+            currentArray[currentIndex] =
+              alphabetLetters[currentAlphabetIndex].toUpperCase();
+            currentArray.push(
+              alphabetLetters[currentAlphabetIndex].toUpperCase()
+            );
+            currentIndex++;
+            currentAlphabetIndex = 0;
+          } else {
+            currentArray[currentIndex] =
+              alphabetLetters[currentAlphabetIndex].toUpperCase();
+            currentAlphabetIndex++;
+          }
+        }
       }
-    }, 200);
 
-    title.current.textContent = "";
+      if (currentArray.length > titleArray.length) {
+        
+        clearInterval(writeLetters);
+        currentArray.pop();
+      }
+      title.current.textContent = currentArray.join("");
+
+      console.log(currentArray);
+      console.log(titleArray);
+    }, 50);
   };
 
   const handleMouseDown = (e) => {
@@ -116,7 +149,7 @@ export default function Home() {
       <div className="container">
         <div className="wrapper">
           <h1 onLoad={completeSentence} ref={chooseCategoryTitle}>
-            Choose A Category
+            CHOOSE A CATEGORY
           </h1>
           <i
             id="left"
