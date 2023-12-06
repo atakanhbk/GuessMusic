@@ -6,6 +6,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
 
 export default function Home() {
+  const title = document.getElementsByClassName("title-text")[0];
+
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
   const arrowBtnRightRef = useRef(null);
@@ -13,8 +15,8 @@ export default function Home() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-
   const [firstCardWidth, setFirstCardWidth] = useState(0);
+  const [titleText, setTitleText] = useState(title.textContent);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -33,9 +35,10 @@ export default function Home() {
 
     const writeLetters = setInterval(() => {
       title.current.textContent += "" + titleArray[currentIndex];
+      setTitleText(title.current.textContent);
       currentIndex++;
 
-      if (wordLength == currentIndex) {
+      if (wordLength === currentIndex) {
         clearInterval(writeLetters);
       }
     }, 200);
@@ -115,8 +118,12 @@ export default function Home() {
 
       <div className="container">
         <div className="wrapper">
-          <h1 onLoad={completeSentence} ref={chooseCategoryTitle}>
-            Choose A Category
+          <h1
+            className="title-text"
+            onLoad={completeSentence}
+            ref={chooseCategoryTitle}
+          >
+            {titleText}
           </h1>
           <i
             id="left"
