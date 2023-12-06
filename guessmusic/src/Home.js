@@ -47,6 +47,10 @@ export default function Home() {
       e.target.id === "left" ? -firstCardWidth : firstCardWidth;
   };
 
+  const completeSentence = () => {
+    console.log("Test");
+  }
+
   return (
     <div id="home">
       <header>
@@ -92,8 +96,11 @@ export default function Home() {
           </a>
         </div>
       </header>
+
       <div className="container">
+  
         <div className="wrapper">
+        <h1 onClick={completeSentence}>Choose A Category</h1>
           <i
             id="left"
             className="fa-solid fa-angle-left"
@@ -109,15 +116,15 @@ export default function Home() {
             ref={carouselRef}
           >
             <li>
-              <div class="category_card">
-                <div class="main">
+              <div className="category_card">
+                <div className="main">
                   <img
-                    class="tokenImage"
+                    className="tokenImage"
                     src="https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
                   />
                   <h2>Rap / Hiphop</h2>
                   <hr />
-                  <div class="prize">
+                  <div className="prize">
                     <p>
                       <img src={CupIcon} /> <ins>Probest</ins>
                     </p>
@@ -127,33 +134,15 @@ export default function Home() {
             </li>
 
             <li>
-              <div class="category_card">
-                <div class="main">
+              <div className="category_card">
+                <div className="main">
                   <img
-                    class="tokenImage"
-                    src="https://vistapointe.net/images/jazz-1.jpg"
-                  />
-                  <h2>Jazz</h2>
-                  <hr />
-                  <div class="prize">
-                    <p>
-                      <img src={CupIcon} /> <ins>JustForMySelf</ins>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="category_card">
-                <div class="main">
-                  <img
-                    class="tokenImage"
+                    className="tokenImage"
                     src=" https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
                   />
                   <h2>Pop</h2>
                   <hr />
-                  <div class="prize">
+                  <div className="prize">
                     <p>
                       <img src={CupIcon} /> <ins>BilliE261</ins>
                     </p>
@@ -163,17 +152,35 @@ export default function Home() {
             </li>
 
             <li>
-              <div class="category_card">
-                <div class="main">
+              <div className="category_card">
+                <div className="main">
                   <img
-                    class="tokenImage"
+                    className="tokenImage"
                     src="https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
                   />
                   <h2>Rock</h2>
                   <hr />
-                  <div class="prize">
+                  <div className="prize">
                     <p>
                       <img src={CupIcon} /> <ins>RockRuckPuck</ins>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="category_card">
+                <div className="main">
+                  <img
+                    className="tokenImage"
+                    src="https://vistapointe.net/images/jazz-1.jpg"
+                  />
+                  <h2>Jazz</h2>
+                  <hr />
+                  <div className="prize">
+                    <p>
+                      <img src={CupIcon} /> <ins>JustForMySelf</ins>
                     </p>
                   </div>
                 </div>
