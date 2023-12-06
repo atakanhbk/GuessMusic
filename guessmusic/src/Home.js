@@ -4,9 +4,14 @@ import CupIcon from "./image/icons/cup-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
-import Video from "./videos/travis_scott.mp4";
+import Test2 from "./videos/travis_scott.mp4";
+import Test from "./videos/billie_eilish.mp4";
+
 
 export default function Home() {
+console.log(Test);
+  console.log(Test2);
+
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
   const arrowBtnRightRef = useRef(null);
@@ -15,7 +20,7 @@ export default function Home() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [timer, setTimer] = useState(null);
-
+  const [bgVideo, setBgVideo] = useState("");
   const [firstCardWidth, setFirstCardWidth] = useState(0);
 
   useEffect(() => {
@@ -27,13 +32,6 @@ export default function Home() {
 
     completeSentence(chooseCategoryTitle);
   }, []);
-
-  const changeBackground = () => {
-    const home = document.getElementById("home");
-    console.log(home);
-    home.style.backgroundImage = `url(https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg)`;
-    home.style.objectFit = "cover";
-  };
 
   const completeSentence = (title) => {
     let titleArray = title.current.textContent.split("");
@@ -106,13 +104,28 @@ export default function Home() {
 
   const videoRef = useRef(null);
 
-  const playVideo = () => {
+  const playVideo = (e) => {
+    const targetInnerHTML = e.currentTarget
+      .querySelector("h2")
+      .textContent.toUpperCase();
+
+    //Burayi degiskenlere value veya id vererek düzeltebilirsin
+    if (targetInnerHTML.includes("RAP")) {
+      setBgVideo("/static/media/travis_scott.6d04ccc01423dc6aba70.mp4");
+    } else if (targetInnerHTML.includes("POP")) {
+      setBgVideo("/static/media/billie_eilish.5ee4c368aa3503907fd0.mp4");
+    } else if (targetInnerHTML.includes("ROCK")) {
+      console.log("ROCK True");
+    } else if (targetInnerHTML.includes("JAZZ")) {
+      console.log("ROCK True");
+    }
+
     if (videoRef.current) {
       const delay = 1000;
       const currentTimer = setTimeout(() => {
         videoRef.current.style.display = "block";
         videoRef.current.play();
-        videoRef.current.currentTime = 30;
+        videoRef.current.currentTime = 3;
       }, delay);
       setTimer(currentTimer);
     }
@@ -140,6 +153,8 @@ export default function Home() {
           muted
           playsInline
           controls={false}
+          src={bgVideo}
+         
           style={{
             outline: "none",
             border: "none",
@@ -150,11 +165,7 @@ export default function Home() {
             opacity: 0.5,
             display: "none",
           }}
-        >
-          <source src={Video} type="video/mp4" />
-          {/* You can add multiple source elements for different formats */}
-          Your browser does not support the video tag.
-        </video>
+        ></video>
       </div>
       <header>
         <div className="trigger_logo">
@@ -222,7 +233,6 @@ export default function Home() {
             <li>
               <div
                 className="category_card"
-                onClick={changeBackground}
                 onMouseEnter={playVideo}
                 onMouseLeave={stopVideo}
               >
@@ -243,7 +253,11 @@ export default function Home() {
             </li>
 
             <li>
-              <div className="category_card" onClick={changeBackground}>
+              <div
+                className="category_card"
+                onMouseEnter={playVideo}
+                onMouseLeave={stopVideo}
+              >
                 <div className="main">
                   <img
                     className="tokenImage"
@@ -261,7 +275,11 @@ export default function Home() {
             </li>
 
             <li>
-              <div className="category_card" onClick={changeBackground}>
+              <div
+                className="category_card"
+                onMouseEnter={playVideo}
+                onMouseLeave={stopVideo}
+              >
                 <div className="main">
                   <img
                     className="tokenImage"
@@ -279,7 +297,11 @@ export default function Home() {
             </li>
 
             <li>
-              <div className="category_card" onClick={changeBackground}>
+              <div
+                className="category_card"
+                onMouseEnter={playVideo}
+                onMouseLeave={stopVideo}
+              >
                 <div className="main">
                   <img
                     className="tokenImage"

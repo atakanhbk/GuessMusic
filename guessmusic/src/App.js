@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Home";
 import VideoPlayer from "./VideoPlayer";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import Video from "./videos/travis_scott.mp4";
+
 
 function App() {
   const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
