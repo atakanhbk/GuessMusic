@@ -4,6 +4,7 @@ import CupIcon from "./image/icons/cup-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
+import Video from "./videos/travis_scott.mp4";
 
 export default function Home() {
   const carouselRef = useRef(null);
@@ -30,11 +31,9 @@ export default function Home() {
     const home = document.getElementById("home");
     console.log(home);
     home.style.backgroundImage = `url(https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg)`;
-    home.style.objectFit = "cover"; 
-   console.log("Worked");
-  }
-
-  
+    home.style.objectFit = "cover";
+    console.log("Worked");
+  };
 
   const completeSentence = (title) => {
     let titleArray = title.current.textContent.split("");
@@ -105,8 +104,55 @@ export default function Home() {
       e.target.id === "left" ? -firstCardWidth : firstCardWidth;
   };
 
+  const videoRef = useRef(null);
+
+  const playVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.style.display = "block";
+      videoRef.current.play();
+      videoRef.current.currentTime = 30;
+    }
+  };
+  const stopVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.style.display = "none";
+      videoRef.current.currentTime = 0;
+   setTimeout(() => {
+      
+       videoRef.current.pause();
+   }, 200);
+   
+    }
+  };
+
   return (
     <div id="home">
+      <div className="bg-video">
+        <video
+          width="100%"
+          height="100%"
+          ref={videoRef}
+          loop
+          muted
+          playsInline
+          controls={false}
+          style={{
+            outline: "none",
+            border: "none",
+            position: "absolute",
+            left: "0",
+            top: "0",
+            objectFit: "cover",
+            opacity: 0.5,
+            display: "none",
+          }}
+          startTime={30}
+        >
+          <source src={Video} type="video/mp4" />
+          {/* You can add multiple source elements for different formats */}
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <header>
         <div className="trigger_logo">
           <div className="logo">
@@ -171,7 +217,12 @@ export default function Home() {
             ref={carouselRef}
           >
             <li>
-              <div className="category_card" onClick={changeBackground}>
+              <div
+                className="category_card"
+                onClick={changeBackground}
+                onMouseOver={playVideo}
+                onMouseLeave={stopVideo}
+              >
                 <div className="main">
                   <img
                     className="tokenImage"
