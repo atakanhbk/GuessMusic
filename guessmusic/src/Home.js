@@ -65,7 +65,6 @@ export default function Home() {
       }
 
       if (currentArray.length > titleArray.length) {
-        
         clearInterval(writeLetters);
         currentArray.pop();
       }
@@ -73,7 +72,7 @@ export default function Home() {
 
       console.log(currentArray);
       console.log(titleArray);
-    }, 50);
+    }, 20);
   };
 
   const handleMouseDown = (e) => {
