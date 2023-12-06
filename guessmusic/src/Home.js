@@ -16,7 +16,7 @@ export default function Home() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [firstCardWidth, setFirstCardWidth] = useState(0);
-  const [titleText, setTitleText] = useState(title.textContent);
+  const [titleText, setTitleText] = useState("");
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -32,6 +32,7 @@ export default function Home() {
     let titleArray = title.current.textContent.split("");
     let wordLength = titleArray.length;
     let currentIndex = 0;
+    setTitleText(title.textContent);
 
     const writeLetters = setInterval(() => {
       title.current.textContent += "" + titleArray[currentIndex];
@@ -123,7 +124,7 @@ export default function Home() {
             onLoad={completeSentence}
             ref={chooseCategoryTitle}
           >
-            {titleText}
+            Choose A Category
           </h1>
           <i
             id="left"
