@@ -4,14 +4,13 @@ import CupIcon from "./image/icons/cup-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
-import Test2 from "./videos/travis_scott.mp4";
-import Test from "./videos/billie_eilish.mp4";
+import RapBgMusic from "./videos/travis_scott.mp4";
+import PopBgMusic from "./videos/billie_eilish.mp4";
+import RockBgMusic from "./videos/slash.mp4";
 
 
 export default function Home() {
-console.log(Test);
-  console.log(Test2);
-
+  console.log(PopBgMusic);
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
   const arrowBtnRightRef = useRef(null);
@@ -113,11 +112,11 @@ console.log(Test);
     if (targetInnerHTML.includes("RAP")) {
       setBgVideo("/static/media/travis_scott.6d04ccc01423dc6aba70.mp4");
     } else if (targetInnerHTML.includes("POP")) {
-      setBgVideo("/static/media/billie_eilish.5ee4c368aa3503907fd0.mp4");
+      setBgVideo("/static/media/billie_eilish.30ff6fcfd68cb868a8aa.mp4");
     } else if (targetInnerHTML.includes("ROCK")) {
-      console.log("ROCK True");
+      setBgVideo("/static/media/slash.b85625fa126f0c148853.mp4");
     } else if (targetInnerHTML.includes("JAZZ")) {
-      console.log("ROCK True");
+      console.log("Jazz True");
     }
 
     if (videoRef.current) {
@@ -125,7 +124,7 @@ console.log(Test);
       const currentTimer = setTimeout(() => {
         videoRef.current.style.display = "block";
         videoRef.current.play();
-        videoRef.current.currentTime = 3;
+        videoRef.current.currentTime = 60;
       }, delay);
       setTimer(currentTimer);
     }
