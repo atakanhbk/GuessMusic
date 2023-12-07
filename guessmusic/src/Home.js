@@ -10,6 +10,7 @@ import RockBgMusic from "./videos/slash.mp4";
 
 
 export default function Home() {
+  console.log(RapBgMusic);
   console.log(PopBgMusic);
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
@@ -110,7 +111,7 @@ export default function Home() {
 
     //Burayi degiskenlere value veya id vererek düzeltebilirsin
     if (targetInnerHTML.includes("RAP")) {
-      setBgVideo("/static/media/travis_scott.6d04ccc01423dc6aba70.mp4");
+      setBgVideo("/static/media/travis_scott.31cdf6f5eb55eb5583af.mp4");
     } else if (targetInnerHTML.includes("POP")) {
       setBgVideo("/static/media/billie_eilish.30ff6fcfd68cb868a8aa.mp4");
     } else if (targetInnerHTML.includes("ROCK")) {
