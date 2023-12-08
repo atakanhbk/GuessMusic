@@ -4,15 +4,12 @@ import CupIcon from "./image/icons/cup-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
-import RapBgMusic from "./videos/travis_scott.mp4";
-import PopBgMusic from "./videos/billie_eilish.mp4";
-import RockBgMusic from "./videos/slash.mp4";
-import AnimeBgMusic from "./videos/demon_slayer.mp4";
-
+import RapBgVideo from "./videos/travis_scott.mp4";
+import PopBgVideo from "./videos/billie_eilish.mp4";
+import RockBgVideo from "./videos/slash.mp4";
+import AnimeBgVideo from "./videos/demon_slayer.mp4";
 
 export default function Home() {
-  console.log(AnimeBgMusic);
-  console.log(PopBgMusic);
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
   const arrowBtnRightRef = useRef(null);
@@ -155,7 +152,6 @@ export default function Home() {
           playsInline
           controls={false}
           src={bgVideo}
-         
           style={{
             outline: "none",
             border: "none",
