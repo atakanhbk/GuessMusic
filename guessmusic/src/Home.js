@@ -7,10 +7,11 @@ import { useRef, useState } from "react";
 import RapBgMusic from "./videos/travis_scott.mp4";
 import PopBgMusic from "./videos/billie_eilish.mp4";
 import RockBgMusic from "./videos/slash.mp4";
+import AnimeBgMusic from "./videos/demon_slayer.mp4";
 
 
 export default function Home() {
-  console.log(RapBgMusic);
+  console.log(AnimeBgMusic);
   console.log(PopBgMusic);
   const carouselRef = useRef(null);
   const arrowBtnLeftRef = useRef(null);
@@ -116,8 +117,8 @@ export default function Home() {
       setBgVideo("/static/media/billie_eilish.30ff6fcfd68cb868a8aa.mp4");
     } else if (targetInnerHTML.includes("ROCK")) {
       setBgVideo("/static/media/slash.b85625fa126f0c148853.mp4");
-    } else if (targetInnerHTML.includes("JAZZ")) {
-      console.log("Jazz True");
+    } else if (targetInnerHTML.includes("ANIME")) {
+      setBgVideo("/static/media/demon_slayer.f3292e47fe96b537deaa.mp4");
     }
 
     if (videoRef.current) {
@@ -305,9 +306,9 @@ export default function Home() {
                 <div className="main">
                   <img
                     className="tokenImage"
-                    src="https://vistapointe.net/images/jazz-1.jpg"
+                    src="https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4"
                   />
-                  <h2>Jazz</h2>
+                  <h2>Anime</h2>
                   <hr />
                   <div className="prize">
                     <p>
