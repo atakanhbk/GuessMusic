@@ -9,6 +9,7 @@ import PopBgVideo from "./videos/billie_eilish.mp4";
 import RockBgVideo from "./videos/slash.mp4";
 import AnimeBgVideo from "./videos/demon_slayer.mp4";
 import BackgroundVideo from "./BackgroundVideo";
+import CategoryCard from "./CategoryCard";
 
 export default function Home() {
   const carouselRef = useRef(null);
@@ -141,10 +142,9 @@ export default function Home() {
     }
   };
 
-  
   return (
-    <div id="home" >
-     <BackgroundVideo videoRef={videoRef} bgVideo={bgVideo}/>
+    <div id="home">
+      <BackgroundVideo videoRef={videoRef} bgVideo={bgVideo} />
       <header>
         <div className="trigger_logo">
           <div className="logo">
@@ -209,91 +209,55 @@ export default function Home() {
             ref={carouselRef}
           >
             <li>
-              <div
-                className="category_card"
-                onMouseEnter={playVideo}
-                onMouseLeave={stopVideo}
-              >
-                <div className="main">
-                  <img
-                    className="tokenImage"
-                    src="https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
-                  />
-                  <h2>Rap / Hiphop</h2>
-                  <hr />
-                  <div className="prize">
-                    <p>
-                      <img src={CupIcon} /> <ins>Probest</ins>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <CategoryCard
+                playVideo={playVideo}
+                stopVideo={stopVideo}
+                imageSrc={
+                  "https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
+                }
+                categoryTitle={"Rap / Hiphop"}
+                cupIcon={CupIcon}
+                winnerNick={"JustForMySelf"}
+              />
             </li>
 
             <li>
-              <div
-                className="category_card"
-                onMouseEnter={playVideo}
-                onMouseLeave={stopVideo}
-              >
-                <div className="main">
-                  <img
-                    className="tokenImage"
-                    src=" https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
-                  />
-                  <h2>Pop</h2>
-                  <hr />
-                  <div className="prize">
-                    <p>
-                      <img src={CupIcon} /> <ins>BilliE261</ins>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <CategoryCard
+                playVideo={playVideo}
+                stopVideo={stopVideo}
+                imageSrc={
+                  "https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
+                }
+                categoryTitle={"Pop"}
+                cupIcon={CupIcon}
+                winnerNick={"BilliE261"}
+              />
             </li>
 
             <li>
-              <div
-                className="category_card"
-                onMouseEnter={playVideo}
-                onMouseLeave={stopVideo}
-              >
-                <div className="main">
-                  <img
-                    className="tokenImage"
-                    src="https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
-                  />
-                  <h2>Rock</h2>
-                  <hr />
-                  <div className="prize">
-                    <p>
-                      <img src={CupIcon} /> <ins>RockRuckPuck</ins>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <CategoryCard
+                playVideo={playVideo}
+                stopVideo={stopVideo}
+                imageSrc={
+                  "https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
+                }
+                categoryTitle={"Rock"}
+                cupIcon={CupIcon}
+                winnerNick={"RockRuckPuck"}
+              />
             </li>
 
             <li>
-              <div
-                className="category_card"
-                onMouseEnter={playVideo}
-                onMouseLeave={stopVideo}
-              >
-                <div className="main">
-                  <img
-                    className="tokenImage"
-                    src="https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4"
-                  />
-                  <h2>Anime</h2>
-                  <hr />
-                  <div className="prize">
-                    <p>
-                      <img src={CupIcon} /> <ins>JustForMySelf</ins>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <CategoryCard
+                playVideo={playVideo}
+                stopVideo={stopVideo}
+                imageSrc={
+                  "https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4"
+                }
+                categoryTitle={"Anime"}
+                cupIcon={CupIcon}
+                winnerNick={"ErenAck"}
+              />
             </li>
           </ul>
           <i
