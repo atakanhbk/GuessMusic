@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import AnimeMusicIcon from "./image/icons/anime-music-icon.png";
-import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
 import RapBgVideo from "./videos/travis_scott.mp4";
@@ -9,6 +8,7 @@ import RockBgVideo from "./videos/slash.mp4";
 import AnimeBgVideo from "./videos/demon_slayer.mp4";
 import BackgroundVideo from "./BackgroundVideo";
 import CategoryCard from "./CategoryCard";
+import HomeHeader from "./HomeHeader";
 
 export default function Home() {
   const carouselRef = useRef(null);
@@ -144,49 +144,7 @@ export default function Home() {
   return (
     <div id="home">
       <BackgroundVideo videoRef={videoRef} bgVideo={bgVideo} />
-      <header>
-        <div className="trigger_logo">
-          <div className="logo">
-            <a className="creative_link" href="/">
-              <img width={250} src={Logo} />
-            </a>
-          </div>
-        </div>
-        <div className="nav">
-          <ul className="nav-ul">
-            <li>
-              <a className="creative_link" href="/home">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="creative_link" href="#">
-                Leader Board
-              </a>
-            </li>
-            <li>
-              <a className="creative_link" href="/game">
-                Play
-              </a>
-            </li>
-            <li>
-              <a className="creative_link" href="/game">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a className="creative_link" href="/game">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="account">
-          <a href="#">
-            <div className="account-button">Log in / Log out</div>
-          </a>
-        </div>
-      </header>
+      <HomeHeader />
 
       <div className="container">
         <div className="wrapper">
