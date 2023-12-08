@@ -141,14 +141,15 @@ export default function Home() {
     }
   };
 
+  
   return (
-    <div id="home">
+    <div id="home" >
      <BackgroundVideo videoRef={videoRef} bgVideo={bgVideo}/>
       <header>
         <div className="trigger_logo">
           <div className="logo">
             <a className="creative_link" href="/">
-              <img width={100} src={Logo} />
+              <img width={250} src={Logo} />
             </a>
           </div>
         </div>

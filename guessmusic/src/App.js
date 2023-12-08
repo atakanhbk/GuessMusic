@@ -50,7 +50,7 @@ function App() {
   return (
     <div id="app">
      
-
+ 
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -66,6 +66,7 @@ function App() {
           />
         </Routes>
       </Router>
+      
     </div>
   );
 }

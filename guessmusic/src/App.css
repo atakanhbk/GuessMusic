@@ -108,12 +108,12 @@ li {
   align-items: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800;900&family=Rubik+Bubbles&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800;900&family=Rubik+Bubbles&display=swap");
 
-.container h1{
+.container h1 {
   color: white;
   position: relative;
-  font-family: 'Rubik Bubbles', sans-serif;
+  font-family: "Rubik Bubbles", sans-serif;
 }
 
 .main_title {
@@ -179,13 +179,10 @@ li {
   display: none;
 }
 
-
-
 .carousel.dragging {
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
-
 
 .category_card .img img {
   width: 140px;
@@ -262,9 +259,9 @@ code {
 }
 
 .category_card .main h2 {
- color: wheat;
- margin: 20px 0px;
- font-size: 30px;
+  color: wheat;
+  margin: 20px 0px;
+  font-size: 30px;
 }
 .category_card .main .tokenImage {
   border-radius: 0.5rem;
@@ -280,18 +277,15 @@ code {
   align-items: center;
   margin-top: 0.2rem;
   margin-bottom: -0.3rem;
- 
 }
 
-.category_card .main .prize img{
- width: 30px;
+.category_card .main .prize img {
+  width: 30px;
 }
-
 
 .category_card .main .prize p {
   display: flex;
   gap: 10px;
- 
 }
 .category_card .main .prize ins {
   color: #a89ec9;
