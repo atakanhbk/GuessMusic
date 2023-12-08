@@ -8,6 +8,7 @@ import RapBgVideo from "./videos/travis_scott.mp4";
 import PopBgVideo from "./videos/billie_eilish.mp4";
 import RockBgVideo from "./videos/slash.mp4";
 import AnimeBgVideo from "./videos/demon_slayer.mp4";
+import BackgroundVideo from "./BackgroundVideo";
 
 export default function Home() {
   const carouselRef = useRef(null);
@@ -142,28 +143,7 @@ export default function Home() {
 
   return (
     <div id="home">
-      <div className="bg-video">
-        <video
-          width="100%"
-          height="100%"
-          ref={videoRef}
-          loop
-          muted
-          playsInline
-          controls={false}
-          src={bgVideo}
-          style={{
-            outline: "none",
-            border: "none",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            objectFit: "cover",
-            opacity: 0.5,
-            display: "none",
-          }}
-        ></video>
-      </div>
+     <BackgroundVideo videoRef={videoRef} bgVideo={bgVideo}/>
       <header>
         <div className="trigger_logo">
           <div className="logo">

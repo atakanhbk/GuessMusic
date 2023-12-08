@@ -1,8 +1,8 @@
 import React from "react";
 
-function BackgroundVideo({ videoRef, Video }) {
+function BackgroundVideo({ videoRef, bgVideo }) {
 
-    console.log(Video);
+    
   return (
     <div>
       <div className="bg-video">
@@ -14,6 +14,7 @@ function BackgroundVideo({ videoRef, Video }) {
           muted
           playsInline
           controls={false}
+          src={bgVideo}
           style={{
             outline: "none",
             border: "none",
@@ -24,11 +25,7 @@ function BackgroundVideo({ videoRef, Video }) {
             opacity: 0.5,
             display: "none",
           }}
-        >
-          <source src={Video} type="video/mp4" />
-          {/* You can add multiple source elements for different formats */}
-          Your browser does not support the video tag.
-        </video>
+        ></video>
       </div>
     </div>
   );
