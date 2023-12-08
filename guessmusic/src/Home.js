@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import AnimeMusicIcon from "./image/icons/anime-music-icon.png";
-import CupIcon from "./image/icons/cup-icon.png";
 import Logo from "./image/logo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useRef, useState } from "react";
@@ -216,7 +215,6 @@ export default function Home() {
                   "https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
                 }
                 categoryTitle={"Rap / Hiphop"}
-                cupIcon={CupIcon}
                 winnerNick={"JustForMySelf"}
               />
             </li>
@@ -229,7 +227,6 @@ export default function Home() {
                   "https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
                 }
                 categoryTitle={"Pop"}
-                cupIcon={CupIcon}
                 winnerNick={"BilliE261"}
               />
             </li>
@@ -242,7 +239,6 @@ export default function Home() {
                   "https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
                 }
                 categoryTitle={"Rock"}
-                cupIcon={CupIcon}
                 winnerNick={"RockRuckPuck"}
               />
             </li>
@@ -255,7 +251,6 @@ export default function Home() {
                   "https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4"
                 }
                 categoryTitle={"Anime"}
-                cupIcon={CupIcon}
                 winnerNick={"ErenAck"}
               />
             </li>
