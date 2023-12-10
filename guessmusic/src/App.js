@@ -19,16 +19,6 @@ function App() {
           correctAnswer: "Another Love",
         },
       },
-      {
-        startSecond: 5,
-        url: "https://www.youtube.com/watch?v=Zi_XLOBDo_Y",
-        answerPart: {
-          firstAnswer: "Beat it",
-          secondAnswer: "Billie Jean",
-          thirdAnswer: "Weekend",
-          correctAnswer: "Billie Jean",
-        },
-      },
 
       {
         startSecond: 3,
@@ -87,6 +77,17 @@ function App() {
 
     rock: [
       {
+        startSecond: 1,
+        url: "https://www.youtube.com/watch?v=btPJPFnesV4&list=PLyORnIW1xT6wFALM5dZlkFhOULbToFok3&index=39&ab_channel=SurvivorVEVO",
+        answerPart: {
+          firstAnswer: "Eye Of The Tiger",
+          secondAnswer: "Hit the Road Jack",
+          thirdAnswer: "We Will Rock You",
+          correctAnswer: "Eye Of The Tiger",
+        },
+      },
+
+      {
         startSecond: 6,
         url: "https://www.youtube.com/watch?v=-tJYN-eG1zk&ab_channel=QueenOfficial",
         answerPart: {
@@ -95,11 +96,61 @@ function App() {
           thirdAnswer: "We Will Rock You",
           correctAnswer: "We Will Rock You",
         },
-        category: "rock",
       },
+      {
+        startSecond: 5.5,
+        url: "https://www.youtube.com/watch?v=pAgnJDJN4VA&list=RDQMiLmoiojqB1I&start_radio=1&ab_channel=acdcVEVO",
+        answerPart: {
+          firstAnswer: "Eye Of The Tiger",
+          secondAnswer: "Back In Black",
+          thirdAnswer: "We Will Rock You",
+          correctAnswer: "Back In Black",
+        },
+      },
+      {
+        startSecond: 0,
+        url: "https://www.youtube.com/watch?v=l482T0yNkeo&list=RDQMiLmoiojqB1I&index=2&ab_channel=acdcVEVO",
+        answerPart: {
+          firstAnswer: "Eye Of The Tiger",
+          secondAnswer: "Back In Black",
+          thirdAnswer: "HighWay To Hell",
+          correctAnswer: "Back In Black",
+        },
+      },
+
+      {
+        startSecond: 5,
+        url: "https://www.youtube.com/watch?v=Zi_XLOBDo_Y",
+        answerPart: {
+          firstAnswer: "Beat it",
+          secondAnswer: "Billie Jean",
+          thirdAnswer: "Weekend",
+          correctAnswer: "Billie Jean",
+        },
+      },
+      {
+        startSecond: 1,
+        url: "https://www.youtube.com/watch?v=1w7OgIMMRc4&list=RDQMiLmoiojqB1I&index=7&ab_channel=GunsNRosesVEVO",
+        answerPart: {
+          firstAnswer: "Sweet Child O' Mine",
+          secondAnswer: "Billie Jean",
+          thirdAnswer: "Weekend",
+          correctAnswer: "Sweet Child O' Mine",
+        },
+      },
+      {
+        startSecond: 13,
+        url: "https://www.youtube.com/watch?v=kXYiU_JCYtU&list=PLyORnIW1xT6wFALM5dZlkFhOULbToFok3&ab_channel=LinkinPark",
+        answerPart: {
+          firstAnswer: "Numb",
+          secondAnswer: "Billie Jean",
+          thirdAnswer: "Weekend",
+          correctAnswer: "Numb",
+        },
+      },
+  
     ],
 
-    
     rap: [
       {
         startSecond: 1,
@@ -143,7 +194,7 @@ function App() {
       },
     ],
 
-    anime:[
+    anime: [
       {
         startSecond: 1,
         url: "https://www.youtube.com/watch?v=2upuBiEiXDk&ab_channel=CrunchyrollCollection",
@@ -191,12 +242,12 @@ function App() {
         url: "https://www.youtube.com/watch?v=fShlVhCfHig&ab_channel=AnimeGuy",
         answerPart: {
           firstAnswer: "Blue Bird",
-          secondAnswer: "Attack on Titan",
+          secondAnswer: "Neon Genesis Evangelion",
           thirdAnswer: "Death Note - L",
-          correctAnswer: "Death Note - L",
+          correctAnswer: "Neon Genesis Evangelion",
         },
       },
-    ]
+    ],
   };
 
   const increaseCurrentMusicIndex = () => {
