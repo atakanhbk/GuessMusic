@@ -1,6 +1,6 @@
 // CategoryCard.js
 
-import React from "react";
+import React, { useRef } from "react";
 import CupIcon from "./image/icons/cup-icon.png";
 
 const CategoryCard = ({
@@ -11,7 +11,36 @@ const CategoryCard = ({
   winnerNick,
 }) => {
   const clickedCard = () => {
+
     localStorage.setItem("categoryName",categoryTitle);
+    window.location.href = "game";
+    console.log("on Click");
+  };
+
+
+
+  const startX = useRef(null);
+  const startY = useRef(null);
+
+  const handleMouseDown = (event) => {
+    startX.current = event.clientX;
+    startY.current = event.clientY;
+  };
+
+
+  const handleMouseUp = (event) => {
+    if (
+      startX.current !== null &&
+      startY.current !== null &&
+      (Math.abs(startX.current - event.clientX) > 5 || Math.abs(startY.current - event.clientY) > 5)
+    ) {
+      console.log('Dragged!');
+    } else {
+      clickedCard();
+    }
+
+    startX.current = null;
+    startY.current = null;
   };
   return (
   
@@ -19,9 +48,10 @@ const CategoryCard = ({
         className="category_card"
         onMouseEnter={playVideo}
         onMouseLeave={stopVideo}
-        onClick={clickedCard}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
       >
-        <a className="main" href="game" draggable="false" style={{textDecoration:"none"}}>
+        <div className="main">
           <img className="tokenImage" src={imageSrc} alt={categoryTitle} />
           <h2>{categoryTitle}</h2>
           <hr />
@@ -30,7 +60,7 @@ const CategoryCard = ({
               <img src={CupIcon} alt="Cup Icon" /> <ins>{winnerNick}</ins>
             </p>
           </div>
-        </a>
+        </div>
         
       </div>
 
