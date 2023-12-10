@@ -14,7 +14,7 @@ export default function HomeHeader() {
       <div className="nav">
         <ul className="nav-ul">
           <li>
-            <a className="creative_link" href="/home">
+            <a className="creative_link" href="#">
               Home
             </a>
           </li>

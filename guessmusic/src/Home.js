@@ -172,7 +172,7 @@ export default function Home() {
                 imageSrc={
                   "https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
                 }
-                categoryTitle={"Rap / Hiphop"}
+                categoryTitle={"Rap"}
                 winnerNick={"JustForMySelf"}
               />
             </li>

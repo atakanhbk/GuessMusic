@@ -6,6 +6,7 @@ export default function AnswerPart({ musics, nextLevel, levelOver }) {
 
   const checkAnswer = (e) => {
     const answerButtons = document.getElementsByClassName("answer");
+    console.log(musics.correctAnswer)
 
     e.preventDefault();
 

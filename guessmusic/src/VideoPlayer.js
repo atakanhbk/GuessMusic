@@ -9,12 +9,15 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
   const [isRestartButtonVisible, setIsRestartButtonVisible] = useState(false);
   const [showAnswerPart, setShowAnswerPart] = useState(false);
   const [timeValue, setTimeValue] = useState("0.5");
-
+  const categoryName = localStorage.getItem("categoryName").toLowerCase();
   const playerRef = useRef(null);
+
+
 
   const startVideo = () => {
     if (playerRef && playerRef.current) {
-      playerRef.current.seekTo(musics[currentMusicIndex].startSecond);
+    
+      playerRef.current.seekTo(musics[categoryName][currentMusicIndex].startSecond);
       playerRef.current.getInternalPlayer().playVideo(); // Plays the video
     }
     setIsButtonVisible(false);
@@ -25,7 +28,7 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
       pauseVideo();
     }, Number(timeValue) * 1000);
 
-    console.log(Number(timeValue) * 1000);
+  
   };
 
   const pauseVideo = () => {
@@ -49,7 +52,7 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
     const reachPlayerRef = setInterval(() => {
 
       if (playerRef && playerRef.current && playerRef.current.getInternalPlayer().G) {
-        playerRef.current.seekTo(musics[currentMusicIndex].startSecond);
+        playerRef.current.seekTo(musics[categoryName][currentMusicIndex].startSecond);
         playerRef.current.getInternalPlayer().playVideo(); // Plays the video
         playerRef.current.getInternalPlayer().pauseVideo();
         clearInterval(reachPlayerRef);
@@ -65,7 +68,7 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
 
   useEffect(() => {
     playJustOnce();
-  }, [musics[currentMusicIndex].url]);
+  }, [musics[categoryName][currentMusicIndex].url]);
 
   return (
     <div id="video-player">
@@ -74,7 +77,7 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
         width={0}
         height={0}
         ref={playerRef}
-        url={musics[currentMusicIndex].url}
+        url={musics[categoryName][currentMusicIndex].url}
         controls={true}
       />
       <div className="all-input-part ">
@@ -103,7 +106,7 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
 
         {showAnswerPart && (
           <AnswerPart
-            musics={musics[currentMusicIndex].answerPart}
+            musics={musics[categoryName][currentMusicIndex].answerPart}
             nextLevel={nextLevel}
             levelOver = {levelOver}
           />
