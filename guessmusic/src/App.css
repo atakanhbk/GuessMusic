@@ -11,7 +11,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(to right, #cc00ff, #7000ff); */
   background: linear-gradient(
     to bottom,
     #161a1a 0%,
@@ -48,7 +47,29 @@ li {
 }
 .creative_link {
   text-decoration: none;
+  position: relative;
   color: white;
+}
+.creative_link:hover{
+  color: #cc00ff;
+}
+
+.creative_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background: linear-gradient(to right, #cc00ff, #7000ff);;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.creative_link:hover::after,
+.creative_link:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.5em, 0);
 }
 
 .account {
