@@ -98,7 +98,7 @@ export default function Home() {
 
   const clickedArrowButton = (e) => {
     carouselRef.current.scrollLeft +=
-      e.target.id === "left" ? -firstCardWidth : firstCardWidth;
+      e.target.id === "left" ? -firstCardWidth * 2 : firstCardWidth * 2;
   };
 
   const videoRef = useRef(null);

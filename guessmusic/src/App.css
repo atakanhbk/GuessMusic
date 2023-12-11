@@ -164,6 +164,17 @@ li {
   right: -72px;
 }
 
+.wrapper i:nth-child(2),
+.wrapper i:last-child {
+  background: gray;
+  color: black;
+}
+
+.wrapper i:nth-child(2):hover,
+.wrapper i:last-child:hover {
+  color: white;
+}
+
 .wrapper .carousel {
   display: grid;
   grid-auto-flow: column;
