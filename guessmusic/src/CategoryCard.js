@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import CupIcon from "./image/icons/cup-icon.png";
 
+
 const CategoryCard = ({
   playVideo,
   stopVideo,

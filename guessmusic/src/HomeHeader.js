@@ -14,7 +14,7 @@ export default function HomeHeader() {
       <div className="nav">
         <ul className="nav-ul">
           <li>
-            <a className="creative_link" href="#">
+            <a className="creative_link" href="/">
               Home
             </a>
           </li>
@@ -45,6 +45,8 @@ export default function HomeHeader() {
           <div className="account-button">Log in / Log out</div>
         </a>
       </div>
+
+      
     </header>
   );
 }
