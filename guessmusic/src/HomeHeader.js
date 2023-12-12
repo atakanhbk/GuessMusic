@@ -45,8 +45,7 @@ export default function HomeHeader() {
           <div className="account-button">Log in / Log out</div>
         </a>
       </div>
-
-      
+    
     </header>
   );
 }
