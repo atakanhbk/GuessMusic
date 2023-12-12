@@ -396,7 +396,7 @@ code {
   justify-content: center;
   flex-direction: column;
   display: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* Button one */

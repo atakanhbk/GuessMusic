@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import CupIcon from "./image/icons/cup-icon.png";
 
-
 const CategoryCard = ({
   playVideo,
   stopVideo,
@@ -12,13 +11,10 @@ const CategoryCard = ({
   winnerNick,
 }) => {
   const clickedCard = () => {
-
-    localStorage.setItem("categoryName",categoryTitle);
+    localStorage.setItem("categoryName", categoryTitle);
     window.location.href = "game";
     console.log("on Click");
   };
-
-
 
   const startX = useRef(null);
   const startY = useRef(null);
@@ -28,14 +24,14 @@ const CategoryCard = ({
     startY.current = event.clientY;
   };
 
-
-  const handleMouseUp = (event) => {
+  const handleClick = (event) => {
     if (
       startX.current !== null &&
       startY.current !== null &&
-      (Math.abs(startX.current - event.clientX) > 5 || Math.abs(startY.current - event.clientY) > 5)
+      (Math.abs(startX.current - event.clientX) > 5 ||
+        Math.abs(startY.current - event.clientY) > 5)
     ) {
-      console.log('Dragged!');
+      console.log("Dragged!");
     } else {
       clickedCard();
     }
@@ -44,27 +40,24 @@ const CategoryCard = ({
     startY.current = null;
   };
   return (
-  
-      <div
-        className="category_card"
-        onMouseEnter={playVideo}
-        onMouseLeave={stopVideo}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-      >
-        <div className="main">
-          <img className="tokenImage" src={imageSrc} alt={categoryTitle} />
-          <h2>{categoryTitle}</h2>
-          <hr />
-          <div className="prize">
-            <p>
-              <img src={CupIcon} alt="Cup Icon" /> <ins>{winnerNick}</ins>
-            </p>
-          </div>
+    <div
+      className="category_card"
+      onMouseEnter={playVideo}
+      onMouseLeave={stopVideo}
+      onMouseDown={handleMouseDown}
+      onClick={handleClick}
+    >
+      <div className="main">
+        <img className="tokenImage" src={imageSrc} alt={categoryTitle} />
+        <h2>{categoryTitle}</h2>
+        <hr />
+        <div className="prize">
+          <p>
+            <img src={CupIcon} alt="Cup Icon" /> <ins>{winnerNick}</ins>
+          </p>
         </div>
-        
       </div>
-
+    </div>
   );
 };
 

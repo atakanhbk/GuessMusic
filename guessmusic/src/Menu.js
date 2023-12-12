@@ -3,6 +3,7 @@ import React from "react";
 function Menu() {
   const button = document.getElementsByClassName("button-one")[0];
   const menu = document.getElementsByClassName("menu")[0];
+  const menuContainer = document.getElementsByClassName("menu_container")[0];
   const line = document.querySelectorAll(".line");
   const lineTop = line[0];
   const lineMiddle = line[1];
@@ -12,6 +13,9 @@ function Menu() {
 
   const handleMenuIconClick = () => {
     if (!menuOpen) {
+   
+        console.log(menuContainer.style.zIndex);
+        
       line.forEach((lineElement) => {
         lineElement.style.transition =
           "y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms";
@@ -28,6 +32,7 @@ function Menu() {
 
       menu.style.transform = "translateY(20%)";
       menu.style.opacity = "1";
+      menuContainer.style.zIndex = "2";
       menuOpen = true;
     } else {
       line.forEach((lineElement) => {
@@ -46,26 +51,28 @@ function Menu() {
 
       menu.style.transform = "translateY(0%)";
       menu.style.opacity = "0";
+      menu.style.zIndex = "2";
+      menuContainer.style.zIndex = "1";
       menuOpen = false;
     }
   };
 
   return (
-    <div class="menu_container">
+    <div className="menu_container">
       <button
-        class="button-one"
+        className="button-one"
         aria-controls="primary-navigation"
         aria-expanded="false"
         onClick={handleMenuIconClick}
       >
         <svg
           fill="var(--button-color)"
-          class="hamburger"
+          className="hamburger"
           viewBox="0 0 100 100"
           width="50"
         >
           <rect
-            class="line top"
+            className="line top"
             width="80"
             height="10"
             x="10"
@@ -73,7 +80,7 @@ function Menu() {
             rx="5"
           ></rect>
           <rect
-            class="line middle"
+            className="line middle"
             width="80"
             height="10"
             x="10"
@@ -81,7 +88,7 @@ function Menu() {
             rx="5"
           ></rect>
           <rect
-            class="line bottom"
+            className="line bottom"
             width="80"
             height="10"
             x="10"
@@ -91,7 +98,7 @@ function Menu() {
         </svg>
       </button>
 
-      <div class="menu">
+      <div className="menu">
         <ul className="nav-ul">
           <li>
             <a className="creative_link" href="/">
