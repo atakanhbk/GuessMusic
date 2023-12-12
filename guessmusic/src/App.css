@@ -172,6 +172,7 @@ li {
   display: flex;
   flex-direction: column;
   top: -10px;
+  z-index: 1;
 }
 
 .wrapper i {
@@ -395,7 +396,7 @@ code {
   justify-content: center;
   flex-direction: column;
   display: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Button one */
