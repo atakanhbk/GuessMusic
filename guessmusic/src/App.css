@@ -50,18 +50,18 @@ li {
   position: relative;
   color: white;
 }
-.creative_link:hover{
+.creative_link:hover {
   color: #cc00ff;
 }
 
 .creative_link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 0.1em;
-  background: linear-gradient(to right, #cc00ff, #7000ff);;
+  background: linear-gradient(to right, #cc00ff, #7000ff);
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
@@ -80,7 +80,20 @@ li {
   box-sizing: border-box;
 }
 
+.account_menu {
+  padding: 4px;
+  border-radius: 12px;
+  background-color: #cc00ff;
+  color: white;
+  box-sizing: border-box;
+}
+
 .account a {
+  text-decoration: none;
+  color: white;
+}
+
+.account_menu a {
   text-decoration: none;
   color: white;
 }
@@ -251,7 +264,6 @@ li {
   }
 }
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -373,4 +385,66 @@ code {
 .bg h1 {
   font-size: 20rem;
   filter: opacity(0.5);
+}
+
+.menu_container {
+  padding: 1rem;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  z-index: 1;
+}
+
+/* Button one */
+
+.button-one {
+  --button-color: white;
+  position: absolute;
+  background: transparent;
+  border-radius: 1rem;
+  border: 5px solid var(--button-color, #000);
+  z-index: 1;
+}
+
+.button-one .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.menu {
+  opacity: 0;
+  transition: 1s;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav {
+    opacity: 0;
+  }
+
+  .menu_container {
+    display: block;
+    position: fixed;
+    top: 0%;
+    right: 0px;
+    max-width: 200px;
+  }
+
+  .menu {
+    background-color: #41424d;
+    border: 2px solid black;
+  }
+
+  .nav-ul {
+    flex-direction: column;
+  }
+
+  .account {
+    opacity: 0;
+  }
 }

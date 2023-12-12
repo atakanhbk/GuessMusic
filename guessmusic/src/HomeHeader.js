@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./image/logo.png";
+import Menu from "./Menu";
 
 export default function HomeHeader() {
   return (
@@ -40,12 +41,12 @@ export default function HomeHeader() {
           </li>
         </ul>
       </div>
+      <Menu />
       <div className="account">
         <a href="#">
           <div className="account-button">Log in / Log out</div>
         </a>
       </div>
-    
     </header>
   );
 }
