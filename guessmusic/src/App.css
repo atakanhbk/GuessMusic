@@ -34,6 +34,14 @@ header {
   font-weight: bold;
 }
 
+.trigger_logo{
+  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 .nav-ul {
   display: flex;
   gap: 50px;
@@ -78,6 +86,7 @@ li {
   background-color: #cc00ff;
   color: white;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .account_menu {
