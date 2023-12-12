@@ -14,7 +14,7 @@ function Menu() {
   const handleMenuIconClick = () => {
     if (!menuOpen) {
    
-        console.log(menuContainer.style.zIndex);
+        
         
       line.forEach((lineElement) => {
         lineElement.style.transition =
@@ -32,7 +32,7 @@ function Menu() {
 
       menu.style.transform = "translateY(20%)";
       menu.style.opacity = "1";
-      menuContainer.style.zIndex = "2";
+      menuContainer.style.zIndex = "3";
       menuOpen = true;
     } else {
       line.forEach((lineElement) => {
@@ -52,7 +52,7 @@ function Menu() {
       menu.style.transform = "translateY(0%)";
       menu.style.opacity = "0";
       menu.style.zIndex = "2";
-      menuContainer.style.zIndex = "1";
+      menuContainer.style.zIndex = "2";
       menuOpen = false;
     }
   };
