@@ -34,12 +34,21 @@ header {
   font-weight: bold;
 }
 
-.trigger_logo{
+.trigger_logo {
   height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.logoIcon {
+  height: 100%;
+}
+
+.logoIcon img {
+  object-fit: none;
+  height: 100%;
 }
 
 .nav-ul {

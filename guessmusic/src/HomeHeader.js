@@ -7,11 +7,9 @@ export default function HomeHeader() {
     <div>
       <header>
         <div className="trigger_logo">
-          <div className="logo">
-            <a className="logoIcon" href="/">
-              <img width={250} src={Logo} />
-            </a>
-          </div>
+          <a className="logoIcon" href="/">
+            <img width={250} src={Logo} />
+          </a>
         </div>
         <div className="nav">
           <ul className="nav-ul">
