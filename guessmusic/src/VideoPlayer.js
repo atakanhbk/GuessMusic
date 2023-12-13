@@ -1,23 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import AnswerPart from "./AnswerPart";
+import GameProgress from "./GameProgress";
 
-
-
-export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrentMusicIndex }) {
+export default function VideoPlayer({
+  currentMusicIndex,
+  musics,
+  increaseCurrentMusicIndex,
+}) {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const [isRestartButtonVisible, setIsRestartButtonVisible] = useState(false);
   const [showAnswerPart, setShowAnswerPart] = useState(false);
   const [timeValue, setTimeValue] = useState("0.5");
   const categoryName = localStorage.getItem("categoryName").toLowerCase();
   const playerRef = useRef(null);
-
-
+  const gameProgressBar = useRef(null);
+  const [seconds, setSeconds] = useState(0);
 
   const startVideo = () => {
     if (playerRef && playerRef.current) {
-    
-      playerRef.current.seekTo(musics[categoryName][currentMusicIndex].startSecond);
+      playerRef.current.seekTo(
+        musics[categoryName][currentMusicIndex].startSecond
+      );
       playerRef.current.getInternalPlayer().playVideo(); // Plays the video
     }
     setIsButtonVisible(false);
@@ -27,8 +31,6 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
     setTimeout(() => {
       pauseVideo();
     }, Number(timeValue) * 1000);
-
-  
   };
 
   const pauseVideo = () => {
@@ -47,12 +49,16 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
     setShowAnswerPart(false);
   };
 
-  
   const playJustOnce = () => {
     const reachPlayerRef = setInterval(() => {
-
-      if (playerRef && playerRef.current && playerRef.current.getInternalPlayer().G) {
-        playerRef.current.seekTo(musics[categoryName][currentMusicIndex].startSecond);
+      if (
+        playerRef &&
+        playerRef.current &&
+        playerRef.current.getInternalPlayer().G
+      ) {
+        playerRef.current.seekTo(
+          musics[categoryName][currentMusicIndex].startSecond
+        );
         playerRef.current.getInternalPlayer().playVideo(); // Plays the video
         playerRef.current.getInternalPlayer().pauseVideo();
         clearInterval(reachPlayerRef);
@@ -60,19 +66,29 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
       }
     }, 200);
   };
-  
 
   const levelOver = () => {
     setIsRestartButtonVisible(false);
-  }
+  };
 
   useEffect(() => {
     playJustOnce();
   }, [musics[categoryName][currentMusicIndex].url]);
 
+  const divStyle = {
+    transform: `translateX(${seconds}px)`,
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(seconds + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div id="video-player">
-  
       <ReactPlayer
         width={0}
         height={0}
@@ -108,11 +124,14 @@ export default function VideoPlayer({ currentMusicIndex, musics, increaseCurrent
           <AnswerPart
             musics={musics[categoryName][currentMusicIndex].answerPart}
             nextLevel={nextLevel}
-            levelOver = {levelOver}
+            levelOver={levelOver}
           />
         )}
       </div>
+
+      <GameProgress />
+
+
     </div>
   );
 }
-
