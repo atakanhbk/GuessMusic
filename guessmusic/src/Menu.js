@@ -110,11 +110,7 @@ function Menu() {
               Leader Board
             </a>
           </li>
-          <li>
-            <a className="creative_link" href="/game">
-              Play
-            </a>
-          </li>
+      
           <li>
             <a className="creative_link" href="/game">
               Contact
