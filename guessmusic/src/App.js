@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Home";
 import VideoPlayer from "./VideoPlayer";
+import AccountPage from "./AccountPage";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -267,6 +268,20 @@ function App() {
                 currentMusicIndex={currentMusicIndex}
                 musics={musicsClass}
                 increaseCurrentMusicIndex={increaseCurrentMusicIndex}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/account"
+            element={
+              <AccountPage
+          
               />
             }
           />

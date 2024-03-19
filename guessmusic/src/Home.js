@@ -146,81 +146,83 @@ export default function Home() {
       <BackgroundVideo videoRef={videoRef} bgVideo={bgVideo} />
       <HomeHeader />
 
-      <div className="container">
-        <div className="wrapper">
-          <h1 onLoad={completeSentence} ref={chooseCategoryTitle}>
-            CHOOSE A CATEGORY
-          </h1>
-          <i
-            id="left"
-            className="fa-solid fa-angle-left"
-            ref={arrowBtnLeftRef}
-            onClick={clickedArrowButton}
-          ></i>
-          <ul
-            className="carousel"
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-            ref={carouselRef}
-          >
-            <li>
-              <CategoryCard
-                playVideo={playVideo}
-                stopVideo={stopVideo}
-                imageSrc={
-                  "https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
-                }
-                categoryTitle={"Rap"}
-                winnerNick={"JustForMySelf"}
-              />
-            </li>
+      <main>
+        <div className="container">
+          <div className="wrapper">
+            <h1 onLoad={completeSentence} ref={chooseCategoryTitle}>
+              CHOOSE A CATEGORY
+            </h1>
+            <i
+              id="left"
+              className="fa-solid fa-angle-left"
+              ref={arrowBtnLeftRef}
+              onClick={clickedArrowButton}
+            ></i>
+            <ul
+              className="carousel"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+              ref={carouselRef}
+            >
+              <li>
+                <CategoryCard
+                  playVideo={playVideo}
+                  stopVideo={stopVideo}
+                  imageSrc={
+                    "https://w0.peakpx.com/wallpaper/561/144/HD-wallpaper-travis-scott-travisscott.jpg"
+                  }
+                  categoryTitle={"Rap"}
+                  winnerNick={"JustForMySelf"}
+                />
+              </li>
 
-            <li>
-              <CategoryCard
-                playVideo={playVideo}
-                stopVideo={stopVideo}
-                imageSrc={
-                  "https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
-                }
-                categoryTitle={"Pop"}
-                winnerNick={"BilliE261"}
-              />
-            </li>
+              <li>
+                <CategoryCard
+                  playVideo={playVideo}
+                  stopVideo={stopVideo}
+                  imageSrc={
+                    "https://w0.peakpx.com/wallpaper/129/489/HD-wallpaper-billie-eilish-billie-eilish.jpg"
+                  }
+                  categoryTitle={"Pop"}
+                  winnerNick={"BilliE261"}
+                />
+              </li>
 
-            <li>
-              <CategoryCard
-                playVideo={playVideo}
-                stopVideo={stopVideo}
-                imageSrc={
-                  "https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
-                }
-                categoryTitle={"Rock"}
-                winnerNick={"RockRuckPuck"}
-              />
-            </li>
+              <li>
+                <CategoryCard
+                  playVideo={playVideo}
+                  stopVideo={stopVideo}
+                  imageSrc={
+                    "https://is.zobj.net/image-server/v1/images?r=vit8B9EVMclxvekpwkleiVatWPmOqJKRqLj-EETO0Zd3ZE1QhvL3jy-rtk5GdxnlkGicDeG9mFr58T09DN1fbtFtjcL3veSQJkn7DduOtwAi5bzToeS9Iw18DKA1V8YovzYDhDNI-cYPdDw5Cb5-XEavFX6gUgtgN1-FTsvkNXAj-wzMw32moOwcwn3CrLOlH_W69eZkznt1BgBKUqRh3G9sxWE6XQoDMxqiHw"
+                  }
+                  categoryTitle={"Rock"}
+                  winnerNick={"RockRuckPuck"}
+                />
+              </li>
 
-            <li>
-              <CategoryCard
-                playVideo={playVideo}
-                stopVideo={stopVideo}
-                imageSrc={
-                  "https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4"
-                }
-                categoryTitle={"Anime"}
-                winnerNick={"ErenAck"}
-              />
-            </li>
-          </ul>
-          <i
-            id="right"
-            className="fa-solid fa-angle-right"
-            ref={arrowBtnRightRef}
-            onClick={clickedArrowButton}
-          ></i>
+              <li>
+                <CategoryCard
+                  playVideo={playVideo}
+                  stopVideo={stopVideo}
+                  imageSrc={
+                    "https://play-lh.googleusercontent.com/EEZRsDvcSq11pwv5SVEyVlqUe5r8nP1r4OL6LM8co4hBX_F1nERK1gtZ-Q8o70MJ_d4"
+                  }
+                  categoryTitle={"Anime"}
+                  winnerNick={"ErenAck"}
+                />
+              </li>
+            </ul>
+            <i
+              id="right"
+              className="fa-solid fa-angle-right"
+              ref={arrowBtnRightRef}
+              onClick={clickedArrowButton}
+            ></i>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

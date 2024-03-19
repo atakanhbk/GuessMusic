@@ -4,14 +4,12 @@ import Menu from "./Menu";
 
 export default function HomeHeader() {
   return (
-    <div>
-      <header>
-        <div className="trigger_logo">
-          <a className="logoIcon" href="/">
-            <img width={250} src={Logo} />
-          </a>
-        </div>
-        <div className="nav">
+    <header>
+      <div className="trigger_logo">
+          <img src={Logo} />
+      </div>
+      <div className="nav">
+        <nav>
           <ul className="nav-ul">
             <li>
               <a className="creative_link" href="/">
@@ -23,7 +21,7 @@ export default function HomeHeader() {
                 Leader Board
               </a>
             </li>
-            
+
             <li>
               <a className="creative_link" href="/game">
                 Contact
@@ -35,14 +33,14 @@ export default function HomeHeader() {
               </a>
             </li>
           </ul>
-        </div>
-        <Menu />
-        <div className="account">
-          <a href="#">
-            <div className="account-button">Log in / Log out</div>
-          </a>
-        </div>
-      </header>
-    </div>
+        </nav>
+      </div>
+      <Menu />
+      <div className="account">
+        <a href="/account">
+          <div className="account-button">Log in / Log out</div>
+        </a>
+      </div>
+    </header>
   );
 }
